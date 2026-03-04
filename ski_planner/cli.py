@@ -14,6 +14,8 @@ from .formatter import (
 )
 from .matcher import load_resorts, match_resort
 from .routes import generate_routes, lookup_routes, select_routes
+from .ticket import build_ticket_response
+from .price_search import build_search_plan
 
 # Data directory: env override or same dir as the JSON files
 DATA_DIR = Path(os.environ.get("SKI_DATA_DIR", Path(__file__).resolve().parent.parent))
@@ -214,6 +216,253 @@ def match(query: str, json_output: bool):
             click.echo(f"🔍 '{query}' 匹配到 {len(matches)} 个雪场：")
             for r in matches:
                 click.echo(f"  • {r['name']} ({r['country']}) — {r.get('ski_area', '')}")
+
+
+@cli.command("ticket-info")
+@click.argument("resort_query")
+@click.option("--dates", "-d", default=None, help="Arrival date YYYY-MM-DD")
+@click.option("--departure-date", default=None, help="Departure date YYYY-MM-DD")
+@click.option("--days", default=7, type=int, help="Trip length in days (fallback if no departure-date)")
+@click.option("--adults", "-a", default=2, type=int, help="Number of adults")
+@click.option("--children", "-c", default=0, type=int, help="Number of children")
+@click.option("--arrival-time", default="14:00", help="Arrival time at resort HH:MM")
+@click.option("--departure-time", default="10:00", help="Departure time from resort HH:MM")
+@click.option("--json-output", "-j", is_flag=True, help="Output raw JSON")
+def ticket_info(resort_query, dates, departure_date, days, adults, children, arrival_time, departure_time, json_output):
+    """Get lift pass and rental info for a resort.
+
+    Examples:
+      ski ticket-info Chamonix
+      ski ticket-info Zermatt --dates 2026-03-14 --departure-date 2026-03-21 --arrival-time 14:00 -j
+      ski ticket-info "Val d'Isère" --days 7 -a 2 -c 1 -j
+    """
+    resorts = load_resorts(DATA_DIR)
+    matches = match_resort(resort_query, resorts)
+
+    if not matches:
+        msg = {
+            "error": "no_match",
+            "message": f"未找到匹配 '{resort_query}' 的雪场",
+            "available_resorts": [r["name"] for r in resorts],
+        }
+        if json_output:
+            click.echo(json.dumps(msg, ensure_ascii=False, indent=2))
+        else:
+            click.echo(f"❌ 未找到匹配 '{resort_query}' 的雪场。")
+            click.echo(f"可用雪场共 {len(resorts)} 个，用 'ski resorts' 查看完整列表。")
+        sys.exit(1)
+
+    if len(matches) > 1:
+        msg = {
+            "status": "multiple_matches",
+            "query": resort_query,
+            "matches": [
+                {"name": r["name"], "country": r["country"], "ski_area": r.get("ski_area", "")}
+                for r in matches
+            ],
+        }
+        if json_output:
+            click.echo(json.dumps(msg, ensure_ascii=False, indent=2))
+        else:
+            click.echo(f"🔍 '{resort_query}' 匹配到 {len(matches)} 个雪场，请选择：")
+            for i, r in enumerate(matches, 1):
+                click.echo(f"  {i}. {r['name']} ({r['country']}) — {r.get('ski_area', '')}")
+        sys.exit(0)
+
+    resort = matches[0]
+    resort_name = resort["name"]
+
+    result = build_ticket_response(
+        resort_name,
+        DATA_DIR,
+        dates=dates,
+        departure_date=departure_date,
+        days=days,
+        adults=adults,
+        children=children,
+        arrival_time=arrival_time,
+        departure_time=departure_time,
+    )
+
+    if json_output:
+        click.echo(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        _print_ticket_info(result)
+
+
+def _print_ticket_info(info: dict) -> None:
+    """Print a human-readable summary of ticket-info output."""
+    resort = info.get("resort", "?")
+    quality = info.get("data_quality", "basic")
+    quality_label = "curated" if quality == "curated" else "basic (no curated data)"
+
+    click.echo(f"\n🎿 Ticket info for {resort}  [{quality_label}]")
+    click.echo("=" * 50)
+
+    # Ski day calculation
+    calc = info.get("ski_day_calculation", {})
+    arr_date = calc.get("arrival_date", "")
+    dep_date = calc.get("departure_date", "")
+    arr_time = calc.get("arrival_time", "")
+    dep_time = calc.get("departure_time", "")
+    date_info = ""
+    if arr_date:
+        date_info += f", {arr_date}"
+        if dep_date:
+            date_info += f" → {dep_date}"
+    time_info = ""
+    if arr_time:
+        time_info = f"  [arrive {arr_time}, depart {dep_time or '?'}]"
+    click.echo(f"\n📅 Ski days  (trip: {calc.get('trip_days', '?')} days{date_info}){time_info}")
+    click.echo(f"   Arrival day   : {calc.get('arrival_day', '?')}")
+    click.echo(f"   Departure day : {calc.get('departure_day', '?')}")
+    click.echo(f"   Full ski days : {calc.get('full_ski_days', 0)}")
+    click.echo(f"   Half days     : {calc.get('half_days', 0)}")
+    click.echo(f"   Total equiv   : {calc.get('total_ski_equivalent', 0)}")
+    click.echo(f"   → Recommended : {calc.get('recommended_pass', '?')}")
+    if calc.get("alternative"):
+        click.echo(f"   → Alternative : {calc['alternative']}")
+
+    # Ski areas
+    ski_areas = info.get("ski_areas", [])
+    if ski_areas:
+        names = [a["name"] if isinstance(a, dict) else a for a in ski_areas]
+        click.echo(f"\n🏔️  Ski area(s): {', '.join(names)}")
+
+    # Pass systems
+    pass_systems = info.get("pass_systems", [])
+    if pass_systems:
+        click.echo("\n🎫 Pass systems:")
+        for ps in pass_systems:
+            name = ps.get("name", "?")
+            url = ps.get("official_url", ps.get("url", ""))
+            click.echo(f"   • {name}" + (f"  — {url}" if url else ""))
+
+    # Rental
+    rental = info.get("rental", {})
+    click.echo("\n🎿 Rental:")
+    shops = rental.get("shops", [])
+    if shops:
+        for s in shops:
+            s_name = s if isinstance(s, str) else s.get("name", str(s))
+            click.echo(f"   • {s_name}")
+    for hint in rental.get("search_hints", []):
+        click.echo(f"   🔍 {hint}")
+    ski_bag = rental.get("airline_ski_bag")
+    if ski_bag:
+        click.echo(f"   ✈️  Ski bag: {ski_bag}")
+
+    # Night skiing
+    night = info.get("night_skiing")
+    if night is not None:
+        click.echo(f"\n🌙 Night skiing: {'yes' if night else 'no'}")
+
+    # Typical hours
+    hours = info.get("typical_hours", {})
+    if hours:
+        opens = hours.get("first_lift", hours.get("opens", "?"))
+        closes = hours.get("last_lift", hours.get("closes", "?"))
+        click.echo(f"\n⏰ Typical hours: {opens} – {closes}")
+
+    # Group
+    group = info.get("group", {})
+    click.echo(
+        f"\n👥 Group: {group.get('adults', 0)} adult(s), {group.get('children', 0)} child(ren)"
+    )
+    for hint in group.get("search_hints", []):
+        click.echo(f"   🔍 {hint}")
+
+    click.echo("")
+
+
+@cli.command("price-search")
+@click.argument("origin")
+@click.argument("resort_query")
+@click.argument("route_ids")
+@click.argument("depart_date")
+@click.option("--return-date", "-r", default=None, help="Return date YYYY-MM-DD")
+@click.option("--json-output", "-j", is_flag=True, help="Output raw JSON")
+def price_search(origin, resort_query, route_ids, depart_date, return_date, json_output):
+    """Generate price search plans for selected routes.
+
+    ROUTE_IDS: comma-separated route IDs, e.g. "R1,R3" or "1,3"
+    DEPART_DATE: departure date in YYYY-MM-DD format
+
+    Examples:
+      ski price-search London Chamonix "R1,R2" 2026-03-15
+      ski price-search London Chamonix "1,2" 2026-03-15 -r 2026-03-22 -j
+    """
+    resorts = load_resorts(DATA_DIR)
+    matches = match_resort(resort_query, resorts)
+
+    if not matches:
+        msg = {
+            "error": "no_match",
+            "message": f"未找到匹配 '{resort_query}' 的雪场",
+        }
+        if json_output:
+            click.echo(json.dumps(msg, ensure_ascii=False, indent=2))
+        else:
+            click.echo(f"❌ 未找到匹配 '{resort_query}' 的雪场。")
+        sys.exit(1)
+
+    resort = matches[0]
+    resort_name = resort["name"]
+
+    result = lookup_routes(origin, resort_name, DATA_DIR)
+    if result is None:
+        click.echo(f"⏳ 正在为 {origin} → {resort_name} 生成路线（首次约 15-20 秒）...", err=True)
+        result = generate_routes(origin, resort_name)
+
+    routes = result.get("routes", [])
+    if not routes:
+        msg = {"error": "no_routes", "message": "未找到路线"}
+        if json_output:
+            click.echo(json.dumps(msg, ensure_ascii=False, indent=2))
+        else:
+            click.echo("❌ 未找到路线")
+        sys.exit(1)
+
+    # Parse route IDs: accept "R1,R3" or "1,3"
+    raw_ids = [s.strip() for s in route_ids.replace(" ", ",").split(",") if s.strip()]
+    normalized_ids = []
+    for rid in raw_ids:
+        if rid.upper().startswith("R"):
+            normalized_ids.append(rid.upper())
+        else:
+            normalized_ids.append(f"R{rid}")
+
+    selected = select_routes(routes, normalized_ids)
+    if not selected:
+        click.echo(f"❌ 未找到路线 ID: {route_ids}")
+        available = [r.get("id", "?") for r in routes]
+        click.echo(f"可用 ID: {', '.join(available)}")
+        sys.exit(1)
+
+    # Build search plans for each selected route
+    output_routes = []
+    for route in selected:
+        legs_plan = build_search_plan(route.get("legs", []), depart_date, return_date)
+        output_routes.append({
+            "id": route.get("id", ""),
+            "name": route.get("name", ""),
+            "name_en": route.get("name_en", ""),
+            "legs": legs_plan,
+        })
+
+    output = {
+        "status": "ok",
+        "origin": origin,
+        "resort": resort_name,
+        "depart_date": depart_date,
+        "return_date": return_date,
+        "routes": output_routes,
+    }
+
+    if json_output:
+        click.echo(json.dumps(output, ensure_ascii=False, indent=2))
+    else:
+        click.echo(json.dumps(output, ensure_ascii=False, indent=2))
 
 
 def main():

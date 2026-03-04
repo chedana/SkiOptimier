@@ -28,6 +28,12 @@ const TEXT2 = "#94a3b8";
 const TEXT3 = "#64748b";
 const FONT = "'DM Sans', 'Segoe UI', system-ui, sans-serif";
 
+function formatDateShort(dateStr) {
+  if (!dateStr) return "";
+  const d = new Date(dateStr + "T00:00:00");
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
 /* ═══════════════════════════════════════════════
    URL PARAMS
    ═══════════════════════════════════════════════ */
@@ -38,6 +44,8 @@ function getUrlParams() {
     origin: params.get("o") || params.get("origin") || "",
     resort: params.get("r") || params.get("resort") || "",
     autoSend: params.get("ch") || params.get("auto") || "",
+    departDate: params.get("d") || params.get("depart") || "",
+    returnDate: params.get("ret") || params.get("return") || "",
   };
 }
 
@@ -287,7 +295,7 @@ function CartStrip({ cart, onRemove }) {
             background: CARD_BG, border: `1px solid ${CARD_BORDER}`, borderRadius: 8,
             padding: "4px 10px", fontSize: 12, color: TEXT1, whiteSpace: "nowrap"
           }}>
-            {item.resort} ×{item.routes.length}
+            {item.resort} ×{item.routes.length}{item.depart_date ? ` · ${formatDateShort(item.depart_date)}${item.return_date ? `-${formatDateShort(item.return_date)}` : ""}` : ""}
             <span onClick={() => onRemove(i)} style={{
               cursor: "pointer", color: TEXT3, marginLeft: 2, fontSize: 14,
               lineHeight: 1
@@ -319,6 +327,8 @@ export default function SkiRoutePlanner() {
   const [confirmed, setConfirmed] = useState(false);
   const [cart, setCart] = useState([]);
   const didAutoSearch = useRef(false);
+  const [departDate, setDepartDate] = useState(urlParams.departDate || "");
+  const [returnDate, setReturnDate] = useState(urlParams.returnDate || "");
 
   const canSearch = origin.trim().length > 1 && resort;
 
@@ -388,13 +398,15 @@ export default function SkiRoutePlanner() {
       return [...filtered, {
         origin: origin.trim(),
         resort,
+        depart_date: departDate,
+        return_date: returnDate,
         routes: currentSelected.map(r => ({
           id: r.id, name: r.name, name_en: r.name_en,
           total_duration_hours: r.total_duration_hours, price_tier: r.price_tier,
         }))
       }];
     });
-  }, [selected, origin, resort, routes]);
+  }, [selected, origin, resort, routes, departDate, returnDate]);
 
   const handleRemoveFromCart = useCallback((index) => {
     setCart(prev => {
@@ -411,6 +423,8 @@ export default function SkiRoutePlanner() {
     return cart.map(item => ({
       origin: item.origin,
       resort: item.resort,
+      depart_date: item.depart_date,
+      return_date: item.return_date,
       selected_routes: item.routes,
     }));
   }, [cart]);
@@ -504,6 +518,28 @@ export default function SkiRoutePlanner() {
                   else { setRoutes(null); setError(`暂无 ${o} → ${r} 的预存路线。请回到 Discord 让茄子为你实时生成。`); }
                 }
               }} />
+            <div style={{ display: "flex", gap: 10 }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>📅 出发日期</label>
+                <input type="date" value={departDate} onChange={e => { setDepartDate(e.target.value); if (returnDate && e.target.value > returnDate) setReturnDate(""); }}
+                  min={new Date().toISOString().split("T")[0]}
+                  style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
+                    background: CARD_BG, color: TEXT1, fontSize: 14, outline: "none", boxSizing: "border-box",
+                    colorScheme: "dark", transition: "border-color 0.2s" }}
+                  onFocus={e => e.target.style.borderColor = ACCENT}
+                  onBlur={e => e.target.style.borderColor = CARD_BORDER} />
+              </div>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>📅 返回日期</label>
+                <input type="date" value={returnDate} onChange={e => setReturnDate(e.target.value)}
+                  min={departDate || new Date().toISOString().split("T")[0]}
+                  style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
+                    background: CARD_BG, color: TEXT1, fontSize: 14, outline: "none", boxSizing: "border-box",
+                    colorScheme: "dark", transition: "border-color 0.2s" }}
+                  onFocus={e => e.target.style.borderColor = ACCENT}
+                  onBlur={e => e.target.style.borderColor = CARD_BORDER} />
+              </div>
+            </div>
             <button onClick={handleSearch} disabled={!canSearch || loading}
               style={{ padding: "14px", borderRadius: 10, border: "none", fontSize: 15, fontWeight: 700,
                 background: canSearch && !loading ? `linear-gradient(135deg, ${ACCENT}, #0ea5e9)` : CARD_BORDER,

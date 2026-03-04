@@ -28,8 +28,9 @@ export default async function handler(req, res) {
   const allIds = selections.flatMap(s => s.selected_routes.map(r => r.id)).join(" ");
   const sections = selections.map(s => {
     const ids = s.selected_routes.map(r => r.id).join(", ");
+    const dateLine = s.depart_date ? `\n📅 ${s.depart_date}${s.return_date ? ` → ${s.return_date}` : ""}` : "";
     const lines = s.selected_routes.map(r => `${r.id} ${r.name}`).join("\n");
-    return `**${s.origin} → ${s.resort}** — ${ids}\n${lines}`;
+    return `**${s.origin} → ${s.resort}** — ${ids}${dateLine}\n${lines}`;
   }).join("\n\n");
 
   const content = `<@1478519063960354948> 确认 ${allIds}\n\n${sections}`;
