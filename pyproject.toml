@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ski-planner"
+version = "0.1.0"
+description = "欧洲滑雪场多模态交通路线查找工具"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.0",
+    "anthropic>=0.30.0",
+]
+
+[project.scripts]
+ski = "ski_planner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ski_planner*"]

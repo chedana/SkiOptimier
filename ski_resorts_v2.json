@@ -1,0 +1,95 @@
+{
+  "version": "1.1",
+  "generated": "2026-03",
+  "total_resorts": 43,
+  "notes": "英国滑雪客常去、品质过关的欧洲滑雪场。优先级: 意大利=法国 > 瑞士 > 奥地利",
+  "countries": [
+    {
+      "country": "France",
+      "country_code": "FR",
+      "resorts": [
+        { "name": "Chamonix-Mont-Blanc", "region": "Haute-Savoie", "ski_area": "Chamonix Valley", "altitude_m": 1035, "top_m": 3842, "piste_km": 155, "nearest_airports": ["GVA", "LYS", "TRN"], "tags": ["expert", "off-piste", "iconic"] },
+        { "name": "Val d'Isère", "region": "Savoie", "ski_area": "Espace Killy", "altitude_m": 1850, "top_m": 3456, "piste_km": 300, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["all-round", "snow-sure", "après"] },
+        { "name": "Tignes", "region": "Savoie", "ski_area": "Espace Killy", "altitude_m": 2100, "top_m": 3456, "piste_km": 300, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["snow-sure", "glacier", "freestyle"] },
+        { "name": "Courchevel", "region": "Savoie", "ski_area": "Les 3 Vallées", "altitude_m": 1850, "top_m": 3230, "piste_km": 600, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["luxury", "largest ski area", "all levels"] },
+        { "name": "Méribel", "region": "Savoie", "ski_area": "Les 3 Vallées", "altitude_m": 1450, "top_m": 3230, "piste_km": 600, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["British favourite", "chalet culture", "3 Valleys"] },
+        { "name": "Val Thorens", "region": "Savoie", "ski_area": "Les 3 Vallées", "altitude_m": 2300, "top_m": 3230, "piste_km": 600, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["highest in Europe", "snow-sure", "après"] },
+        { "name": "La Plagne", "region": "Savoie", "ski_area": "Paradiski", "altitude_m": 1250, "top_m": 3250, "piste_km": 425, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["family", "large area", "all levels"] },
+        { "name": "Les Arcs", "region": "Savoie", "ski_area": "Paradiski", "altitude_m": 1600, "top_m": 3250, "piste_km": 425, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["train accessible", "varied terrain"] },
+        { "name": "Alpe d'Huez", "region": "Isère", "ski_area": "Alpe d'Huez Grand Domaine", "altitude_m": 1860, "top_m": 3330, "piste_km": 250, "nearest_airports": ["GNB", "LYS", "GVA"], "tags": ["sunny", "long runs", "intermediate"] },
+        { "name": "Les Deux Alpes", "region": "Isère", "ski_area": "Les 2 Alpes", "altitude_m": 1650, "top_m": 3600, "piste_km": 200, "nearest_airports": ["GNB", "LYS", "GVA"], "tags": ["glacier", "snowpark", "young crowd"] },
+        { "name": "Morzine", "region": "Haute-Savoie", "ski_area": "Portes du Soleil", "altitude_m": 1000, "top_m": 2466, "piste_km": 600, "nearest_airports": ["GVA"], "tags": ["charming village", "family", "huge area"] },
+        { "name": "Avoriaz", "region": "Haute-Savoie", "ski_area": "Portes du Soleil", "altitude_m": 1800, "top_m": 2466, "piste_km": 600, "nearest_airports": ["GVA"], "tags": ["car-free", "family", "ski-in ski-out"] },
+        { "name": "Les Gets", "region": "Haute-Savoie", "ski_area": "Portes du Soleil", "altitude_m": 1170, "top_m": 2002, "piste_km": 600, "nearest_airports": ["GVA"], "tags": ["beginner-friendly", "charming"] },
+        { "name": "Flaine", "region": "Haute-Savoie", "ski_area": "Grand Massif", "altitude_m": 1600, "top_m": 2500, "piste_km": 265, "nearest_airports": ["GVA"], "tags": ["snow-sure", "short transfer"] },
+        { "name": "Megève", "region": "Haute-Savoie", "ski_area": "Évasion Mont-Blanc", "altitude_m": 1113, "top_m": 2353, "piste_km": 400, "nearest_airports": ["GVA", "LYS"], "tags": ["luxury", "charming", "gourmet"] },
+        { "name": "La Clusaz", "region": "Haute-Savoie", "ski_area": "Massif des Aravis", "altitude_m": 1040, "top_m": 2600, "piste_km": 125, "nearest_airports": ["GVA", "LYS"], "tags": ["authentic", "off-piste", "short transfer"] },
+        { "name": "Serre Chevalier", "region": "Hautes-Alpes", "ski_area": "Serre Chevalier Vallée", "altitude_m": 1200, "top_m": 2800, "piste_km": 250, "nearest_airports": ["TRN", "GNB", "MRS"], "tags": ["sunny", "value", "tree-lined"] },
+        { "name": "La Rosière", "region": "Savoie", "ski_area": "Espace San Bernardo", "altitude_m": 1850, "top_m": 2800, "piste_km": 160, "nearest_airports": ["GVA", "LYS", "CMF"], "tags": ["cross-border Italy", "sunny", "family"] }
+      ]
+    },
+    {
+      "country": "Italy",
+      "country_code": "IT",
+      "resorts": [
+        { "name": "Cortina d'Ampezzo", "region": "Veneto", "ski_area": "Dolomiti Superski", "altitude_m": 1224, "top_m": 3244, "piste_km": 1200, "nearest_airports": ["VCE", "TSF", "INN"], "tags": ["2026 Olympics", "Dolomites", "glamour"] },
+        { "name": "Val Gardena (Selva)", "region": "Alto Adige", "ski_area": "Dolomiti Superski / Sellaronda", "altitude_m": 1236, "top_m": 2518, "piste_km": 175, "nearest_airports": ["INN", "VRN", "BZO"], "tags": ["Sellaronda circuit", "Dolomites", "cuisine"] },
+        { "name": "Alta Badia", "region": "Alto Adige", "ski_area": "Dolomiti Superski / Sellaronda", "altitude_m": 1324, "top_m": 2778, "piste_km": 130, "nearest_airports": ["INN", "VRN", "BZO"], "tags": ["gourmet skiing", "Sellaronda", "intermediate"] },
+        { "name": "Cervinia", "region": "Valle d'Aosta", "ski_area": "Cervinia-Zermatt", "altitude_m": 2050, "top_m": 3899, "piste_km": 360, "nearest_airports": ["TRN", "MXP", "GVA"], "tags": ["glacier", "connected to Zermatt", "snow-sure"] },
+        { "name": "Courmayeur", "region": "Valle d'Aosta", "ski_area": "Courmayeur Mont Blanc", "altitude_m": 1224, "top_m": 2755, "piste_km": 100, "nearest_airports": ["TRN", "GVA", "MXP"], "tags": ["Mont Blanc views", "charming", "Italian cuisine"] },
+        { "name": "La Thuile", "region": "Valle d'Aosta", "ski_area": "Espace San Bernardo", "altitude_m": 1441, "top_m": 2641, "piste_km": 160, "nearest_airports": ["TRN", "GVA"], "tags": ["cross-border France", "quiet", "value"] },
+        { "name": "Livigno", "region": "Lombardia", "ski_area": "Livigno", "altitude_m": 1816, "top_m": 2798, "piste_km": 115, "nearest_airports": ["INN", "BGY", "MXP"], "tags": ["tax-free", "snowpark", "2026 Olympics"] },
+        { "name": "Madonna di Campiglio", "region": "Trentino", "ski_area": "Skirama Dolomiti", "altitude_m": 1522, "top_m": 2504, "piste_km": 150, "nearest_airports": ["VRN", "BGY", "BZO"], "tags": ["elegant", "tree-lined", "Italian charm"] }
+      ]
+    },
+    {
+      "country": "Switzerland",
+      "country_code": "CH",
+      "resorts": [
+        { "name": "Zermatt", "region": "Valais", "ski_area": "Zermatt-Cervinia", "altitude_m": 1620, "top_m": 3899, "piste_km": 360, "nearest_airports": ["GVA", "ZRH", "MXP"], "tags": ["iconic Matterhorn", "car-free", "glacier"] },
+        { "name": "Verbier", "region": "Valais", "ski_area": "4 Vallées", "altitude_m": 1500, "top_m": 3330, "piste_km": 412, "nearest_airports": ["GVA"], "tags": ["expert", "off-piste", "luxury", "British favourite"] },
+        { "name": "Crans-Montana", "region": "Valais", "ski_area": "Crans-Montana", "altitude_m": 1500, "top_m": 3000, "piste_km": 140, "nearest_airports": ["GVA"], "tags": ["sunny", "views", "World Cup"] },
+        { "name": "Saas-Fee", "region": "Valais", "ski_area": "Saas-Fee", "altitude_m": 1800, "top_m": 3600, "piste_km": 100, "nearest_airports": ["GVA", "ZRH", "MXP"], "tags": ["car-free", "glacier", "snow-sure"] },
+        { "name": "Wengen", "region": "Bernese Oberland", "ski_area": "Jungfrau Region", "altitude_m": 1274, "top_m": 2971, "piste_km": 213, "nearest_airports": ["BSL", "ZRH", "BRN"], "tags": ["car-free", "traditional", "Lauberhorn"] },
+        { "name": "Grindelwald", "region": "Bernese Oberland", "ski_area": "Jungfrau Region", "altitude_m": 1034, "top_m": 2971, "piste_km": 213, "nearest_airports": ["BSL", "ZRH", "BRN"], "tags": ["Eiger views", "V-Bahn gondola"] },
+        { "name": "St. Moritz", "region": "Graubünden", "ski_area": "Engadin St. Moritz", "altitude_m": 1822, "top_m": 3303, "piste_km": 350, "nearest_airports": ["ZRH", "MXP", "BGY"], "tags": ["luxury", "glamour", "Olympic history"] },
+        { "name": "Davos-Klosters", "region": "Graubünden", "ski_area": "Davos Klosters", "altitude_m": 1560, "top_m": 2844, "piste_km": 300, "nearest_airports": ["ZRH"], "tags": ["large area", "royal favourite"] },
+        { "name": "Laax", "region": "Graubünden", "ski_area": "Flims Laax Falera", "altitude_m": 1100, "top_m": 3018, "piste_km": 224, "nearest_airports": ["ZRH"], "tags": ["freestyle", "snowpark", "young"] },
+        { "name": "Andermatt", "region": "Uri", "ski_area": "Andermatt-Sedrun-Disentis", "altitude_m": 1444, "top_m": 2961, "piste_km": 180, "nearest_airports": ["ZRH"], "tags": ["expanding", "off-piste", "Chedi hotel"] }
+      ]
+    },
+    {
+      "country": "Austria",
+      "country_code": "AT",
+      "resorts": [
+        { "name": "St. Anton am Arlberg", "region": "Tirol", "ski_area": "Ski Arlberg", "altitude_m": 1304, "top_m": 2811, "piste_km": 303, "nearest_airports": ["INN", "ZRH", "MUC"], "tags": ["expert", "off-piste", "après legend"] },
+        { "name": "Lech-Zürs", "region": "Vorarlberg", "ski_area": "Ski Arlberg", "altitude_m": 1450, "top_m": 2811, "piste_km": 303, "nearest_airports": ["INN", "ZRH", "MUC"], "tags": ["luxury", "royal favourite", "powder"] },
+        { "name": "Kitzbühel", "region": "Tirol", "ski_area": "Kitzbühel-Kirchberg", "altitude_m": 800, "top_m": 2000, "piste_km": 170, "nearest_airports": ["INN", "SZG", "MUC"], "tags": ["Hahnenkamm", "charming town", "legendary"] },
+        { "name": "Ischgl", "region": "Tirol", "ski_area": "Silvretta Arena", "altitude_m": 1377, "top_m": 2872, "piste_km": 239, "nearest_airports": ["INN", "ZRH"], "tags": ["après party", "snow-sure", "cross-border"] },
+        { "name": "Sölden", "region": "Tirol", "ski_area": "Sölden", "altitude_m": 1350, "top_m": 3340, "piste_km": 144, "nearest_airports": ["INN"], "tags": ["glacier", "James Bond", "short transfer"] },
+        { "name": "Mayrhofen", "region": "Tirol", "ski_area": "Zillertal", "altitude_m": 630, "top_m": 2500, "piste_km": 142, "nearest_airports": ["INN"], "tags": ["Harakiri run", "young crowd", "snowpark"] },
+        { "name": "Saalbach-Hinterglemm", "region": "Salzburg", "ski_area": "Skicircus", "altitude_m": 1003, "top_m": 2096, "piste_km": 270, "nearest_airports": ["SZG", "MUC", "INN"], "tags": ["huge circuit", "après", "intermediate"] }
+      ]
+    }
+  ],
+  "airport_codes": {
+    "GVA": "Geneva",
+    "LYS": "Lyon",
+    "GNB": "Grenoble",
+    "CMF": "Chambéry",
+    "TRN": "Turin",
+    "MXP": "Milan Malpensa",
+    "BGY": "Milan Bergamo",
+    "VRN": "Verona",
+    "VCE": "Venice",
+    "TSF": "Treviso",
+    "BZO": "Bolzano",
+    "INN": "Innsbruck",
+    "SZG": "Salzburg",
+    "MUC": "Munich",
+    "ZRH": "Zurich",
+    "BSL": "Basel",
+    "BRN": "Bern",
+    "MRS": "Marseille"
+  }
+}
