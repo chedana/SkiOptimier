@@ -1,0 +1,3286 @@
+{
+  "version": "1.0",
+  "generated": "2026-03",
+  "resorts": {
+    "Chamonix-Mont-Blanc": {
+      "ski_areas": [
+        {
+          "name": "Grands Montets",
+          "pass_system": "Chamonix Valley Pass",
+          "altitude_top_m": 3275,
+          "distance_from_town_km": 3,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Brévent-Flégère",
+          "pass_system": "Chamonix Valley Pass",
+          "altitude_top_m": 2525,
+          "distance_from_town_km": 1,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Les Houches",
+          "pass_system": "Chamonix Valley Pass",
+          "altitude_top_m": 1900,
+          "distance_from_town_km": 6,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Le Tour / Balme",
+          "pass_system": "Chamonix Valley Pass",
+          "altitude_top_m": 2200,
+          "distance_from_town_km": 15,
+          "terrain": "beginner",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Chamonix Valley Pass",
+          "type": "regional",
+          "covers": [
+            "Grands Montets",
+            "Brévent-Flégère",
+            "Les Houches",
+            "Le Tour / Balme"
+          ],
+          "official_url": "https://domaineschamonix.montblancnaturalresort.com/en/ticketing/chamonix-lepass",
+          "search_hint": "Chamonix Valley Pass price 2025/26 season day pass adult",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Online booking discount ~5-8%; half-day from 12:30"
+        },
+        {
+          "name": "Mont Blanc Unlimited",
+          "type": "super",
+          "covers": [
+            "Grands Montets",
+            "Brévent-Flégère",
+            "Les Houches",
+            "Le Tour / Balme",
+            "Saint-Gervais / Les Contamines",
+            "Verbier (limited)"
+          ],
+          "official_url": "https://www.montblancnaturalresort.com/en/ticketing/montblanc-unlimited",
+          "search_hint": "Mont Blanc Unlimited ski pass price 2025/26 adult",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Covers both French and Swiss Mont Blanc ski areas; most expensive option"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Chamonix",
+          "url": "https://www.intersport-chamonix.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Snell Sports",
+          "url": "https://www.snellsports.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Chamonix Sport",
+          "url": "https://www.chamonix-sport.com/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Courchevel": {
+      "ski_areas": [
+        {
+          "name": "Courchevel",
+          "pass_system": "Les 3 Vallées",
+          "altitude_top_m": 2738,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Courchevel Local Pass",
+          "type": "local",
+          "covers": [
+            "Courchevel"
+          ],
+          "official_url": "https://www.skipasscourchevel.com/en",
+          "search_hint": "Courchevel local ski pass price 2025/26 season adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cheapest option if only skiing Courchevel; covers all Courchevel sectors (1850, 1650, 1550, Moriond)"
+        },
+        {
+          "name": "Les 3 Vallées",
+          "type": "super",
+          "covers": [
+            "Courchevel",
+            "Méribel",
+            "Val Thorens",
+            "Les Menuires",
+            "Saint-Martin-de-Belleville"
+          ],
+          "official_url": "https://www.les3vallees.com/en/skipass",
+          "search_hint": "Les 3 Vallées ski pass price 2025/26 adult day multi-day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "World's largest ski area; online discount ~5%; book in advance for best prices"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Courchevel",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Courchevel",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Méribel": {
+      "ski_areas": [
+        {
+          "name": "Méribel",
+          "pass_system": "Les 3 Vallées",
+          "altitude_top_m": 2952,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Méribel Local Pass",
+          "type": "local",
+          "covers": [
+            "Méribel",
+            "Méribel-Mottaret"
+          ],
+          "official_url": "https://www.skipass-meribel.com/en/",
+          "search_hint": "Méribel local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cheaper than 3 Vallées if staying in Méribel only"
+        },
+        {
+          "name": "Les 3 Vallées",
+          "type": "super",
+          "covers": [
+            "Courchevel",
+            "Méribel",
+            "Val Thorens",
+            "Les Menuires",
+            "Saint-Martin-de-Belleville"
+          ],
+          "official_url": "https://www.les3vallees.com/en/skipass",
+          "search_hint": "Les 3 Vallées ski pass price 2025/26 adult day multi-day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "World's largest ski area; Méribel sits in central valley — natural gateway to all 3 valleys"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Méribel",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set Méribel",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Europski Méribel",
+          "url": "https://www.europski.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Val Thorens": {
+      "ski_areas": [
+        {
+          "name": "Val Thorens",
+          "pass_system": "Les 3 Vallées",
+          "altitude_top_m": 3200,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Val Thorens Local Pass",
+          "type": "local",
+          "covers": [
+            "Val Thorens",
+            "Orelle"
+          ],
+          "official_url": "https://www.valthorens.com/en/ski/forfaits/",
+          "search_hint": "Val Thorens local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Good value if not venturing to other valleys; includes Orelle sector"
+        },
+        {
+          "name": "Les 3 Vallées",
+          "type": "super",
+          "covers": [
+            "Courchevel",
+            "Méribel",
+            "Val Thorens",
+            "Les Menuires",
+            "Saint-Martin-de-Belleville"
+          ],
+          "official_url": "https://www.les3vallees.com/en/skipass",
+          "search_hint": "Les 3 Vallées ski pass price 2025/26 adult day multi-day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Highest resort in Europe at 2300m base; snow guaranteed; night skiing on select runs"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Val Thorens",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set Val Thorens",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Oxygène Val Thorens",
+          "url": "https://www.oxygene-ski.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Val d'Isère": {
+      "ski_areas": [
+        {
+          "name": "Val d'Isère",
+          "pass_system": "Espace Killy",
+          "altitude_top_m": 3456,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Val d'Isère Local Pass",
+          "type": "local",
+          "covers": [
+            "Val d'Isère"
+          ],
+          "official_url": "https://www.valdisere.ski/en/",
+          "search_hint": "Val d'Isère local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Covers Val d'Isère only; significant saving vs Espace Killy if not going to Tignes"
+        },
+        {
+          "name": "Espace Killy",
+          "type": "regional",
+          "covers": [
+            "Val d'Isère",
+            "Tignes"
+          ],
+          "official_url": "https://www.valdisere.ski/en/skipass-prices",
+          "search_hint": "Espace Killy ski pass price 2025/26 adult day Val d'Isère Tignes",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Combined Val d'Isère + Tignes; ~300km pistes; glacier skiing available year-round on Tignes Grande Motte"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Val d'Isère",
+          "url": "https://www.intersport-valdisere.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Val d'Isère",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Precision Ski",
+          "url": "https://www.precision-ski.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Tignes": {
+      "ski_areas": [
+        {
+          "name": "Tignes",
+          "pass_system": "Espace Killy",
+          "altitude_top_m": 3456,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Grande Motte Glacier",
+          "pass_system": "Espace Killy",
+          "altitude_top_m": 3456,
+          "distance_from_town_km": 2,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Tignes Local Pass",
+          "type": "local",
+          "covers": [
+            "Tignes",
+            "Grande Motte Glacier"
+          ],
+          "official_url": "https://www.skipass-tignes.com/en/",
+          "search_hint": "Tignes local ski pass price 2025/26 adult day glacier",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Glacier skiing available year-round; summer skiing possible on Grande Motte"
+        },
+        {
+          "name": "Espace Killy",
+          "type": "regional",
+          "covers": [
+            "Val d'Isère",
+            "Tignes"
+          ],
+          "official_url": "https://www.valdisere.ski/en/skipass-prices",
+          "search_hint": "Espace Killy ski pass price 2025/26 adult day Val d'Isère Tignes",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "~300km combined; connects to Val d'Isère via Col de Fresse lift; great for a week"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Tignes",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set Tignes",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Tignes",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:00",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Morzine": {
+      "ski_areas": [
+        {
+          "name": "Morzine-Avoriaz",
+          "pass_system": "Portes du Soleil",
+          "altitude_top_m": 2277,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": true
+        },
+        {
+          "name": "Les Gets",
+          "pass_system": "Portes du Soleil",
+          "altitude_top_m": 2002,
+          "distance_from_town_km": 8,
+          "terrain": "all-levels",
+          "night_skiing": true
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Morzine-Les Gets Local Pass",
+          "type": "local",
+          "covers": [
+            "Morzine-Avoriaz",
+            "Les Gets"
+          ],
+          "official_url": "https://www.lesgets.com/en/lift-pass/",
+          "search_hint": "Morzine Les Gets local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cheaper option if staying local; does not include Swiss side of Portes du Soleil"
+        },
+        {
+          "name": "Portes du Soleil",
+          "type": "super",
+          "covers": [
+            "Morzine-Avoriaz",
+            "Les Gets",
+            "Avoriaz",
+            "Châtel",
+            "Champéry",
+            "Morgins",
+            "Champoussin",
+            "Val d'Illiez",
+            "Les Crosets",
+            "Torgon"
+          ],
+          "official_url": "https://en.portesdusoleil.com/portes-du-soleil-lift-passes/book-my-winter-pass/",
+          "search_hint": "Portes du Soleil ski pass price 2025/26 adult day French Swiss",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cross-border France-Switzerland; 600km pistes; one of world's largest linked areas"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Morzine",
+          "url": "https://www.intersport-morzine.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set Morzine",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Morzine",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Avoriaz": {
+      "ski_areas": [
+        {
+          "name": "Avoriaz",
+          "pass_system": "Portes du Soleil",
+          "altitude_top_m": 2277,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Avoriaz Local Pass",
+          "type": "local",
+          "covers": [
+            "Avoriaz"
+          ],
+          "official_url": "https://www.skipass-avoriaz.com/en/winter/",
+          "search_hint": "Avoriaz local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Car-free resort; access by cable car from Morzine or by snow-cat; local pass covers Avoriaz only"
+        },
+        {
+          "name": "Portes du Soleil",
+          "type": "super",
+          "covers": [
+            "Morzine-Avoriaz",
+            "Les Gets",
+            "Avoriaz",
+            "Châtel",
+            "Champéry",
+            "Morgins",
+            "Champoussin",
+            "Val d'Illiez",
+            "Les Crosets",
+            "Torgon"
+          ],
+          "official_url": "https://en.portesdusoleil.com/portes-du-soleil-lift-passes/book-my-winter-pass/",
+          "search_hint": "Portes du Soleil ski pass price 2025/26 adult day Avoriaz",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Car-free resort at 1800m; best snow in Portes du Soleil; Wall (La Chavanette) is a famous double black run"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Avoriaz",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set Avoriaz",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "La Plagne": {
+      "ski_areas": [
+        {
+          "name": "La Plagne",
+          "pass_system": "Paradiski",
+          "altitude_top_m": 3250,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Montchavin-Les Coches",
+          "pass_system": "Paradiski",
+          "altitude_top_m": 2100,
+          "distance_from_town_km": 15,
+          "terrain": "beginner",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "La Plagne Local Pass",
+          "type": "local",
+          "covers": [
+            "La Plagne",
+            "Montchavin-Les Coches"
+          ],
+          "official_url": "https://www.skipass-laplagne.com/en/",
+          "search_hint": "La Plagne local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "10 linked villages on the plateau; local pass good value if not crossing to Les Arcs"
+        },
+        {
+          "name": "Paradiski",
+          "type": "super",
+          "covers": [
+            "La Plagne",
+            "Les Arcs",
+            "Peisey-Vallandry"
+          ],
+          "official_url": "https://paradiski.com/en/forfaits/",
+          "search_hint": "Paradiski ski pass price 2025/26 adult day La Plagne Les Arcs",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "425km pistes; connected by Vanoise Express cable car (world's widest); upgrade from local pass available daily"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport La Plagne",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set La Plagne",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 La Plagne",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:45",
+        "half_day_start": "12:30"
+      }
+    },
+    "Les Arcs": {
+      "ski_areas": [
+        {
+          "name": "Les Arcs",
+          "pass_system": "Paradiski",
+          "altitude_top_m": 3226,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Peisey-Vallandry",
+          "pass_system": "Paradiski",
+          "altitude_top_m": 2100,
+          "distance_from_town_km": 5,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Les Arcs Local Pass",
+          "type": "local",
+          "covers": [
+            "Les Arcs",
+            "Peisey-Vallandry"
+          ],
+          "official_url": "https://www.lesarcs-peiseyvallandry.com/en/",
+          "search_hint": "Les Arcs local ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "4 Arc villages (1600, 1800, 2000, 2100); funicular from Bourg-Saint-Maurice to Arc 1600"
+        },
+        {
+          "name": "Paradiski",
+          "type": "super",
+          "covers": [
+            "La Plagne",
+            "Les Arcs",
+            "Peisey-Vallandry"
+          ],
+          "official_url": "https://paradiski.com/en/forfaits/",
+          "search_hint": "Paradiski ski pass price 2025/26 adult day Les Arcs La Plagne",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "425km pistes; Vanoise Express cable car links to La Plagne; upgrade available daily at lifts"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Les Arcs",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Set Les Arcs",
+          "url": "https://www.ski-set.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Dynamic Sport Les Arcs",
+          "url": "https://www.dynamic-sport.fr/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Zermatt": {
+      "ski_areas": [
+        {
+          "name": "Zermatt",
+          "pass_system": "Zermatt / Matterhorn",
+          "altitude_top_m": 3883,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Cervinia (cross-border)",
+          "pass_system": "Zermatt / Matterhorn",
+          "altitude_top_m": 3480,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Zermatt Ski Pass",
+          "type": "local",
+          "covers": [
+            "Zermatt"
+          ],
+          "official_url": "https://www.matterhornparadise.ch/en/book/tickets",
+          "search_hint": "Zermatt ski pass price 2025/26 adult day CHF",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; highest ski area in Alps at 3883m; year-round glacier skiing on Klein Matterhorn"
+        },
+        {
+          "name": "Matterhorn Ski Paradise",
+          "type": "regional",
+          "covers": [
+            "Zermatt",
+            "Cervinia",
+            "Valtournenche"
+          ],
+          "official_url": "https://www.matterhornparadise.ch/en/information/tickets-prices",
+          "search_hint": "Matterhorn Ski Paradise cross-border pass price 2025/26 Zermatt Cervinia",
+          "pass_types": [
+            "day",
+            "multi_day"
+          ],
+          "notes": "Cross-border Switzerland-Italy; passport required; Cervinia extension adds ~35EUR to day pass; check weather as pass may be restricted"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Slalom Mietservice Zermatt",
+          "url": "https://www.slalom-zermatt.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Intersport Zermatt",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiverleih Matterhornblick",
+          "url": "https://www.matterhornblick.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:00",
+        "last_lift": "16:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "St. Anton am Arlberg": {
+      "ski_areas": [
+        {
+          "name": "St. Anton am Arlberg",
+          "pass_system": "Ski Arlberg",
+          "altitude_top_m": 2811,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Lech-Zürs",
+          "pass_system": "Ski Arlberg",
+          "altitude_top_m": 2450,
+          "distance_from_town_km": 12,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Stuben-Zug",
+          "pass_system": "Ski Arlberg",
+          "altitude_top_m": 2350,
+          "distance_from_town_km": 8,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Ski Arlberg",
+          "type": "regional",
+          "covers": [
+            "St. Anton am Arlberg",
+            "Lech-Zürs",
+            "Stuben-Zug",
+            "Warth-Schröcken",
+            "Sonnenkopf"
+          ],
+          "official_url": "https://www.skiarlberg.at/en/tickets-season-times/prices-tickets-winter",
+          "search_hint": "Ski Arlberg pass price 2025/26 adult day St Anton Lech Zürs",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; 305km pistes; recently expanded with Warth-Schröcken connection; online booking recommended"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Arlberg St. Anton",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Plattner",
+          "url": "https://www.sport-plattner.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Strolz",
+          "url": "https://www.strolz.at/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Verbier": {
+      "ski_areas": [
+        {
+          "name": "Verbier / Mont Fort",
+          "pass_system": "4 Vallées",
+          "altitude_top_m": 3330,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Nendaz",
+          "pass_system": "4 Vallées",
+          "altitude_top_m": 3300,
+          "distance_from_town_km": 20,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Veysonnaz",
+          "pass_system": "4 Vallées",
+          "altitude_top_m": 2400,
+          "distance_from_town_km": 25,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Verbier Pass",
+          "type": "local",
+          "covers": [
+            "Verbier / Mont Fort",
+            "La Tzoumaz"
+          ],
+          "official_url": "https://verbier4vallees.ch/en/useful-information/prices-winter",
+          "search_hint": "Verbier local ski pass price 2025/26 adult day CHF",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; local pass covers Verbier sector only; good value if not exploring all 4 Vallées"
+        },
+        {
+          "name": "4 Vallées",
+          "type": "super",
+          "covers": [
+            "Verbier / Mont Fort",
+            "Nendaz",
+            "Veysonnaz",
+            "Thyon",
+            "La Tzoumaz"
+          ],
+          "official_url": "https://verbier4vallees.ch/en/useful-information/prices-winter",
+          "search_hint": "4 Vallées ski pass price 2025/26 adult day Verbier CHF",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "410km pistes; Mont Fort glacier at 3330m; legendary off-piste in Verbier; Freeride World Tour venue"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Verbier",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sports de Rosay",
+          "url": "https://www.sportsderosay.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Powder Extreme",
+          "url": "https://www.powderextreme.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Kitzbühel": {
+      "ski_areas": [
+        {
+          "name": "Kitzbühel / Ski Safari",
+          "pass_system": "KitzSki",
+          "altitude_top_m": 2000,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": true
+        },
+        {
+          "name": "SkiWelt Wilder Kaiser",
+          "pass_system": "SkiWelt Alpin Card",
+          "altitude_top_m": 1957,
+          "distance_from_town_km": 20,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "KitzSki",
+          "type": "local",
+          "covers": [
+            "Kitzbühel / Ski Safari",
+            "Pass Thurn"
+          ],
+          "official_url": "https://www.kitzski.at/en/tickets-vouchers/ski-ticket.html",
+          "search_hint": "KitzSki ski pass price 2025/26 adult day Kitzbühel",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; 170km pistes; famous Hahnenkamm downhill course; night skiing on selected runs"
+        },
+        {
+          "name": "SkiWelt Alpin Card",
+          "type": "regional",
+          "covers": [
+            "Kitzbühel / Ski Safari",
+            "SkiWelt Wilder Kaiser",
+            "Pass Thurn",
+            "Kelchsau"
+          ],
+          "official_url": "https://www.skiwelt.at/en/superskicard.html",
+          "search_hint": "SkiWelt Alpin Card ski pass 2025/26 Kitzbühel price",
+          "pass_types": [
+            "multi_day",
+            "season"
+          ],
+          "notes": "Combines Kitzbühel with SkiWelt (largest linked ski area in Austria); multi-day upgrade"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Kitzbühel",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Zintl",
+          "url": "https://www.sportzintl.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Hahnenkamm Sport",
+          "url": "https://www.hahnenkammsport.at/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Cortina d'Ampezzo": {
+      "ski_areas": [
+        {
+          "name": "Tofana",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 3244,
+          "distance_from_town_km": 2,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Faloria-Cristallo",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2932,
+          "distance_from_town_km": 1,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Cinque Torri",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2361,
+          "distance_from_town_km": 5,
+          "terrain": "beginner",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Cortina d'Ampezzo Local Pass",
+          "type": "local",
+          "covers": [
+            "Tofana",
+            "Faloria-Cristallo",
+            "Cinque Torri",
+            "Col Druscié"
+          ],
+          "official_url": "https://skipasscortina.com/EN/page17-winter-prices",
+          "search_hint": "Cortina d'Ampezzo ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Scenic ski area in Dolomites; Milan Cortina 2026 Winter Olympics venue; local pass good if not exploring wider Dolomites"
+        },
+        {
+          "name": "Dolomiti Superski",
+          "type": "super",
+          "covers": [
+            "Cortina d'Ampezzo",
+            "Alta Badia",
+            "Val Gardena",
+            "Val di Fassa",
+            "Arabba",
+            "Madonna di Campiglio",
+            "12 more ski areas"
+          ],
+          "official_url": "https://www.dolomitisuperski.com/en/plan-and-book/skipassandprices",
+          "search_hint": "Dolomiti Superski pass price 2025/26 adult day Cortina",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "1200km pistes; 12 interconnected ski areas; Sella Ronda circuit possible; world's largest ski area by some measures"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Noleggio Sci Cortina",
+          "url": "https://www.cortinasport.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Intersport Cortina",
+          "url": "https://www.intersport-rent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Ghiaccio",
+          "url": "https://www.sportghiaccio.it/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Courmayeur": {
+      "ski_areas": [
+        {
+          "name": "Courmayeur / Mont Blanc",
+          "pass_system": "Courmayeur Mont Blanc",
+          "altitude_top_m": 2755,
+          "distance_from_town_km": 1,
+          "terrain": "expert",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Courmayeur Mont Blanc Ski Pass",
+          "type": "local",
+          "covers": [
+            "Courmayeur / Mont Blanc"
+          ],
+          "official_url": "https://www.courmayeur-montblanc.com/en/skipass-rates/",
+          "search_hint": "Courmayeur ski pass price 2025/26 adult day Mont Blanc",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Italian side of Mont Blanc; excellent views; Skyway Monte Bianco cable car for non-skiers; ski area smaller than French side"
+        },
+        {
+          "name": "Mont Blanc Unlimited",
+          "type": "super",
+          "covers": [
+            "Courmayeur / Mont Blanc",
+            "Chamonix Valley areas",
+            "Saint-Gervais / Les Contamines"
+          ],
+          "official_url": "https://www.montblancnaturalresort.com/en/ticketing/montblanc-unlimited",
+          "search_hint": "Mont Blanc Unlimited ski pass price 2025/26 adult Courmayeur Chamonix",
+          "pass_types": [
+            "multi_day",
+            "season"
+          ],
+          "notes": "Links French and Italian Mont Blanc resorts; requires Mont Blanc Tunnel crossing for inter-resort travel"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Courmayeur",
+          "url": "https://www.intersport-courmayeur.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Dynamite Ski Rent",
+          "url": "https://www.dynamiterent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Noleggio Sci La Saxe",
+          "url": "https://www.lasaxe.it/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Grindelwald": {
+      "ski_areas": [
+        {
+          "name": "Grindelwald-First",
+          "pass_system": "Jungfrau Ski Region",
+          "altitude_top_m": 2168,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Kleine Scheidegg / Männlichen",
+          "pass_system": "Jungfrau Ski Region",
+          "altitude_top_m": 2061,
+          "distance_from_town_km": 5,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Wengen",
+          "pass_system": "Jungfrau Ski Region",
+          "altitude_top_m": 2320,
+          "distance_from_town_km": 8,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Jungfrau Ski Region",
+          "type": "regional",
+          "covers": [
+            "Grindelwald-First",
+            "Kleine Scheidegg / Männlichen",
+            "Wengen",
+            "Mürren-Schilthorn"
+          ],
+          "official_url": "https://www.jungfrau.ch/en-gb/jungfrau-ski-region/buy-skipass/",
+          "search_hint": "Jungfrau Ski Region ski pass price 2025/26 adult day CHF Grindelwald",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; 206km pistes across 4 areas; famous Lauberhorn World Cup downhill; Swiss Travel Pass discounts available"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Grindelwald",
+          "url": "https://www.intersport-grindelwald.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Bort Sport Grindelwald",
+          "url": "https://www.bortsport.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport und Mode Grindelwald",
+          "url": "https://www.sport-grindelwald.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Ischgl": {
+      "ski_areas": [
+        {
+          "name": "Ischgl",
+          "pass_system": "Silvretta Arena",
+          "altitude_top_m": 2872,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Samnaun (Switzerland)",
+          "pass_system": "Silvretta Arena",
+          "altitude_top_m": 2864,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Silvretta Arena",
+          "type": "regional",
+          "covers": [
+            "Ischgl",
+            "Samnaun (Switzerland)"
+          ],
+          "official_url": "https://tickets.ischgl.com/en/",
+          "search_hint": "Silvretta Arena Ischgl ski pass price 2025/26 adult day Samnaun",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cross-border Austria-Switzerland; 239km pistes; duty-free shopping in Samnaun; passport or ID required at Swiss border; no surcharge for crossing"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Mathoy Ischgl",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Pätscheider",
+          "url": "https://www.paetscheider-sport.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Hire Ischgl",
+          "url": "https://www.skihire-ischgl.com/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Alpe d'Huez": {
+      "ski_areas": [
+        {
+          "name": "Alpe d'Huez",
+          "pass_system": "Alpe d'Huez Grand Domaine",
+          "altitude_top_m": 3330,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        },
+        {
+          "name": "Deux Alpes (day trip)",
+          "pass_system": "Grand Ski",
+          "altitude_top_m": 3568,
+          "distance_from_town_km": 20,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Alpe d'Huez Grand Domaine",
+          "type": "local",
+          "covers": [
+            "Alpe d'Huez",
+            "Auris-en-Oisans",
+            "Oz-en-Oisans",
+            "Vaujany",
+            "Saint-François-Longchamp (limited)"
+          ],
+          "official_url": "https://skipass.alpedhuez.com/hiver/en/all-skipasses/",
+          "search_hint": "Alpe d'Huez Grand Domaine ski pass price 2025/26 adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "250km pistes; longest black run in Europe (La Sarenne 16km); online discount ~5-8%; night skiing Tuesdays and Fridays"
+        },
+        {
+          "name": "Grand Ski",
+          "type": "super",
+          "covers": [
+            "Alpe d'Huez",
+            "Deux Alpes",
+            "Serre Chevalier",
+            "Puy-Saint-Vincent"
+          ],
+          "official_url": "https://skipass.alpedhuez.com/hiver/en/all-skipasses/",
+          "search_hint": "Grand Ski pass price 2025/26 adult Alpe d'Huez Deux Alpes Serre Chevalier",
+          "pass_types": [
+            "multi_day",
+            "season"
+          ],
+          "notes": "Multi-resort pass for Oisans region; best value for week-long stays wanting variety"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Alpe d'Huez",
+          "url": "https://www.intersport-alpedhuez.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Alpe d'Huez",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Alpe d'Huez",
+          "url": "https://www.sport2000-oisans.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Livigno": {
+      "ski_areas": [
+        {
+          "name": "Livigno",
+          "pass_system": "Livigno Ski Pass",
+          "altitude_top_m": 2798,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Livigno Ski Pass",
+          "type": "local",
+          "covers": [
+            "Livigno",
+            "Mottolino",
+            "Carosello 3000"
+          ],
+          "official_url": "https://www.livigno.eu/en/skipass-online",
+          "search_hint": "Livigno ski pass price 2025/26 adult day Mottolino Carosello",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Tax-free zone (duty-free); cheaper prices on equipment, fuel and alcohol; ~115km pistes; night skiing on Mottolino slope; popular for early/late season"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Livigno",
+          "url": "https://www.intersport-livigno.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Livigno",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Livigno",
+          "url": "https://www.sportlivigno.com/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Les Deux Alpes": {
+      "ski_areas": [
+        {
+          "name": "Les Deux Alpes",
+          "pass_system": "Les 2 Alpes Pass",
+          "altitude_top_m": 3600,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Les Deux Alpes Glacier",
+          "pass_system": "Les 2 Alpes Pass",
+          "altitude_top_m": 3600,
+          "distance_from_town_km": 2,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Les 2 Alpes Pass",
+          "type": "local",
+          "covers": [
+            "Les Deux Alpes",
+            "Les Deux Alpes Glacier"
+          ],
+          "official_url": "https://www.skipass-2alpes.com/en/",
+          "search_hint": "Les 2 Alpes ski pass price 2025/26 season adult day glacier",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Glacier skiing on Caldera at 3600m; summer skiing available on glacier; one of Europe's largest glaciers for skiing; online discount ~5%"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Les 2 Alpes",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Les 2 Alpes",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Les 2 Alpes",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Les Gets": {
+      "ski_areas": [
+        {
+          "name": "Les Gets",
+          "pass_system": "Portes du Soleil",
+          "altitude_top_m": 2002,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Les Gets Local Pass",
+          "type": "local",
+          "covers": [
+            "Les Gets"
+          ],
+          "official_url": "https://pass.lesgets.com/en/skipass-prices/",
+          "search_hint": "Les Gets local ski pass price 2025/26 season adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Charming traditional village; local pass covers Les Gets sector only; cheaper option if not exploring wider Portes du Soleil"
+        },
+        {
+          "name": "Portes du Soleil",
+          "type": "super",
+          "covers": [
+            "Les Gets",
+            "Morzine-Avoriaz",
+            "Avoriaz",
+            "Châtel",
+            "Champéry",
+            "Morgins",
+            "Champoussin",
+            "Val d'Illiez",
+            "Les Crosets",
+            "Torgon"
+          ],
+          "official_url": "https://en.portesdusoleil.com/portes-du-soleil-lift-passes/book-my-winter-pass/",
+          "search_hint": "Portes du Soleil ski pass price 2025/26 adult day Les Gets French Swiss",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cross-border France-Switzerland; 600km pistes; Les Gets directly connected to Morzine; family-friendly with good beginner terrain"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Les Gets",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Les Gets",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Les Gets",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Flaine": {
+      "ski_areas": [
+        {
+          "name": "Flaine / Grand Massif",
+          "pass_system": "Grand Massif Pass",
+          "altitude_top_m": 2480,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Samoëns",
+          "pass_system": "Grand Massif Pass",
+          "altitude_top_m": 2480,
+          "distance_from_town_km": 15,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Grand Massif Pass",
+          "type": "regional",
+          "covers": [
+            "Flaine",
+            "Samoëns",
+            "Morillon",
+            "Les Carroz",
+            "Sixt-Fer-à-Cheval"
+          ],
+          "official_url": "https://www.grand-massif.com/en/your-stay/ski-pass/",
+          "search_hint": "Grand Massif ski pass price 2025/26 season adult day Flaine",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "265km pistes across 5 areas; snow-sure purpose-built resort at 1600m base; longest black run in France (Cascades 14km); online discount ~5%"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Flaine",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Flaine",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Flaine",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Megève": {
+      "ski_areas": [
+        {
+          "name": "Megève / Mont d'Arbois",
+          "pass_system": "Évasion Mont-Blanc",
+          "altitude_top_m": 2353,
+          "distance_from_town_km": 1,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Rochebrune",
+          "pass_system": "Évasion Mont-Blanc",
+          "altitude_top_m": 1754,
+          "distance_from_town_km": 1,
+          "terrain": "beginner",
+          "night_skiing": false
+        },
+        {
+          "name": "Le Jaillet",
+          "pass_system": "Évasion Mont-Blanc",
+          "altitude_top_m": 1800,
+          "distance_from_town_km": 2,
+          "terrain": "beginner",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Évasion Mont-Blanc Pass",
+          "type": "regional",
+          "covers": [
+            "Megève",
+            "Saint-Gervais",
+            "Saint-Nicolas-de-Véroce",
+            "Les Contamines",
+            "Combloux",
+            "La Giettaz",
+            "Cordon"
+          ],
+          "official_url": "https://forfait.megeve.com/hiver/en/our-skipass/",
+          "search_hint": "Évasion Mont-Blanc ski pass price 2025/26 season adult day Megève",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "445km pistes; luxury resort founded by Rothschild family; great views of Mont Blanc; intermediate-friendly terrain; chic village with gourmet restaurants"
+        },
+        {
+          "name": "Mont Blanc Unlimited",
+          "type": "super",
+          "covers": [
+            "Megève",
+            "Saint-Gervais",
+            "Les Contamines",
+            "Chamonix Valley areas",
+            "Courmayeur / Mont Blanc",
+            "Verbier (limited)"
+          ],
+          "official_url": "https://www.montblancnaturalresort.com/en/ticketing/montblanc-unlimited",
+          "search_hint": "Mont Blanc Unlimited ski pass price 2025/26 adult Megève Chamonix",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Covers French and Italian Mont Blanc regions including Chamonix; most expensive option but maximum flexibility"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Megève",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Megève",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Roc et Neige",
+          "url": "https://www.rocetneige.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "La Clusaz": {
+      "ski_areas": [
+        {
+          "name": "La Clusaz / Massif des Aravis",
+          "pass_system": "La Clusaz Pass",
+          "altitude_top_m": 2600,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "La Clusaz Pass",
+          "type": "local",
+          "covers": [
+            "La Clusaz / Massif des Aravis"
+          ],
+          "official_url": "https://forfait.laclusaz.com/en/",
+          "search_hint": "La Clusaz ski pass price 2025/26 season adult day Aravis",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "132km pistes; authentic Savoyard village; good intermediate terrain; Reblochon cheese country; less crowded than mega-resorts; good family resort"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport La Clusaz",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 La Clusaz",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "La Clusaz Sports",
+          "url": "https://www.laclusaz.com/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Serre Chevalier": {
+      "ski_areas": [
+        {
+          "name": "Serre Chevalier Vallée",
+          "pass_system": "Serre Chevalier Vallée Pass",
+          "altitude_top_m": 2800,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Serre Chevalier Vallée Pass",
+          "type": "regional",
+          "covers": [
+            "Serre Chevalier Vallée",
+            "Briançon",
+            "Chantemerle",
+            "Villeneuve",
+            "Le Monêtier-les-Bains"
+          ],
+          "official_url": "https://www.serrechevalier-pass.com/en/price-list",
+          "search_hint": "Serre Chevalier ski pass price 2025/26 season adult day Hautes-Alpes",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "250km pistes; 4 linked villages; sunny south-facing aspect (3000+ hours of sun/year); excellent snow record due to altitude; good value vs northern Alps; Briançon is UNESCO World Heritage town"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Serre Chevalier",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 Serre Chevalier",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiset Serre Chevalier",
+          "url": "https://www.skiset.com/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "La Rosière": {
+      "ski_areas": [
+        {
+          "name": "La Rosière",
+          "pass_system": "Espace San Bernardo",
+          "altitude_top_m": 2809,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "La Thuile (cross-border)",
+          "pass_system": "Espace San Bernardo",
+          "altitude_top_m": 2642,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "La Rosière Local Pass",
+          "type": "local",
+          "covers": [
+            "La Rosière"
+          ],
+          "official_url": "https://www.larosiere.ski/en/forfaits-de-ski",
+          "search_hint": "La Rosière local ski pass price 2025/26 season adult day",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Small family-friendly resort; good beginner terrain; sunny south-west facing; cheaper than nearby Val d'Isère/Les Arcs"
+        },
+        {
+          "name": "Espace San Bernardo Pass",
+          "type": "regional",
+          "covers": [
+            "La Rosière",
+            "La Thuile"
+          ],
+          "official_url": "https://www.larosiere.net/en/ski-passes/",
+          "search_hint": "Espace San Bernardo ski pass price 2025/26 La Rosière La Thuile cross-border",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cross-border France-Italy via Col du Mont; passport required; combined 160km pistes; La Thuile less crowded on Italian side; subject to weather and wind at the col"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport La Rosière",
+          "url": "https://www.intersport-rent.fr/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport 2000 La Rosière",
+          "url": "https://www.sport2000.fr/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:45",
+        "half_day_start": "12:30"
+      }
+    },
+    "Val Gardena (Selva)": {
+      "ski_areas": [
+        {
+          "name": "Val Gardena / Selva",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2519,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Alpe di Siusi",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2350,
+          "distance_from_town_km": 5,
+          "terrain": "beginner",
+          "night_skiing": false
+        },
+        {
+          "name": "Sellaronda Circuit",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2950,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Val Gardena / Alpe di Siusi Pass",
+          "type": "regional",
+          "covers": [
+            "Val Gardena / Selva",
+            "Alpe di Siusi",
+            "Ortisei",
+            "Santa Cristina"
+          ],
+          "official_url": "https://www.valgardena.it/en/winter-holidays-dolomites/ski-passes/skipass-eshop/",
+          "search_hint": "Val Gardena ski pass price 2025/26 season adult day Selva Alpe di Siusi",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; directly on the Sellaronda circuit (52km round trip on groomed pistes); Alpe di Siusi Europe's largest high-altitude plateau; Saslong World Cup downhill course"
+        },
+        {
+          "name": "Dolomiti Superski",
+          "type": "super",
+          "covers": [
+            "Val Gardena",
+            "Alta Badia",
+            "Val di Fassa",
+            "Arabba",
+            "Cortina d'Ampezzo",
+            "Madonna di Campiglio",
+            "12 more ski areas"
+          ],
+          "official_url": "https://www.dolomitisuperski.com/en/plan-and-book/skipassandprices",
+          "search_hint": "Dolomiti Superski pass price 2025/26 adult day Val Gardena Sellaronda",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "1200km pistes across entire Dolomites; Sellaronda circuit (clockwise/anticlockwise) accessible with Dolomiti Superski; world-class scenery; UNESCO World Heritage landscape"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Val Gardena",
+          "url": "https://www.intersport-rent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Kostner Selva",
+          "url": "https://www.sportkostner.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Noleggio Sci Selva",
+          "url": "https://www.valgardena.it/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Alta Badia": {
+      "ski_areas": [
+        {
+          "name": "Alta Badia / Corvara",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2778,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Sellaronda Circuit",
+          "pass_system": "Dolomiti Superski",
+          "altitude_top_m": 2950,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Alta Badia Pass",
+          "type": "regional",
+          "covers": [
+            "Alta Badia / Corvara",
+            "La Villa",
+            "San Cassiano",
+            "Colfosco",
+            "Badia",
+            "La Val"
+          ],
+          "official_url": "https://www.altabadia.org/en/alta-badia-skipass-prices/skipass-dolomites",
+          "search_hint": "Alta Badia ski pass price 2025/26 season adult day Corvara Sellaronda",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "130km pistes in Alta Badia sector; directly on Sellaronda circuit; famous Gourmet Skisafari with starred-chef huts on piste; best food in the Dolomites"
+        },
+        {
+          "name": "Dolomiti Superski",
+          "type": "super",
+          "covers": [
+            "Alta Badia",
+            "Val Gardena",
+            "Val di Fassa",
+            "Arabba",
+            "Cortina d'Ampezzo",
+            "Madonna di Campiglio",
+            "12 more ski areas"
+          ],
+          "official_url": "https://www.dolomitisuperski.com/en/plan-and-book/skipassandprices",
+          "search_hint": "Dolomiti Superski pass price 2025/26 adult day Alta Badia Sellaronda",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "1200km pistes; Sellaronda circuit (grand tour of all 4 Sella group valleys); UNESCO World Heritage Dolomites; world-class mountain cuisine on piste"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Alta Badia",
+          "url": "https://www.intersport-rent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Kostner Corvara",
+          "url": "https://www.sportkostner.com/",
+          "online_discount": true
+        },
+        {
+          "name": "Noleggio Sci Corvara",
+          "url": "https://www.altabadia.org/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "17:00",
+        "half_day_start": "12:30"
+      }
+    },
+    "Cervinia": {
+      "ski_areas": [
+        {
+          "name": "Cervinia / Breuil",
+          "pass_system": "Matterhorn Ski Paradise",
+          "altitude_top_m": 3480,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Valtournenche",
+          "pass_system": "Matterhorn Ski Paradise",
+          "altitude_top_m": 3480,
+          "distance_from_town_km": 10,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Zermatt (cross-border)",
+          "pass_system": "Matterhorn Ski Paradise",
+          "altitude_top_m": 3883,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Cervinia Local Pass",
+          "type": "local",
+          "covers": [
+            "Cervinia / Breuil",
+            "Valtournenche"
+          ],
+          "official_url": "https://cervino.skiperformance.com/en/winter/store",
+          "search_hint": "Cervinia ski pass price 2025/26 season adult day local",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Italian side of Matterhorn; glacier skiing to 3899m; local pass covers Cervinia and Valtournenche sectors; sunny south-facing; good for intermediates"
+        },
+        {
+          "name": "Matterhorn Ski Paradise",
+          "type": "regional",
+          "covers": [
+            "Cervinia / Breuil",
+            "Valtournenche",
+            "Zermatt"
+          ],
+          "official_url": "https://www.matterhornparadise.ch/en/book/tickets",
+          "search_hint": "Matterhorn Ski Paradise cross-border pass price 2025/26 Cervinia Zermatt Italy Switzerland",
+          "pass_types": [
+            "day",
+            "multi_day"
+          ],
+          "notes": "Cross-border Italy-Switzerland; passport required at Klein Matterhorn crossing; glacier skiing year-round; significantly cheaper Italian entry to Zermatt ski area; check weather as high-altitude crossings may be restricted"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Cervinia",
+          "url": "https://www.intersport-rent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Grenon Cervinia",
+          "url": "https://www.cervinia.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Noleggio Sci Cervinia",
+          "url": "https://www.cervinia.it/en/ski-school/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "La Thuile": {
+      "ski_areas": [
+        {
+          "name": "La Thuile / Espace San Bernardo",
+          "pass_system": "Espace San Bernardo",
+          "altitude_top_m": 2642,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "La Rosière (cross-border)",
+          "pass_system": "Espace San Bernardo",
+          "altitude_top_m": 2809,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "La Thuile Local Pass",
+          "type": "local",
+          "covers": [
+            "La Thuile / Espace San Bernardo"
+          ],
+          "official_url": "https://www.lathuile.it/en/skipass-and-rates",
+          "search_hint": "La Thuile ski pass price 2025/26 season adult day local",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Quiet, good-value Italian resort; less busy than French counterparts; good intermediate terrain; local pass covers La Thuile sector only"
+        },
+        {
+          "name": "Espace San Bernardo Pass",
+          "type": "regional",
+          "covers": [
+            "La Thuile",
+            "La Rosière"
+          ],
+          "official_url": "https://lathuile.skiperformance.com/en/winter/store",
+          "search_hint": "Espace San Bernardo ski pass price 2025/26 La Thuile La Rosière cross-border Italy France",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Cross-border Italy-France via Col du Mont; passport required; combined 160km pistes; La Rosière on French side; subject to weather and wind at the col; great for quiet skiing"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport La Thuile",
+          "url": "https://www.intersport-rent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport La Thuile",
+          "url": "https://www.lathuile.it/",
+          "online_discount": false
+        },
+        {
+          "name": "Noleggio Sci La Thuile",
+          "url": "https://www.lathuile.net/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Madonna di Campiglio": {
+      "ski_areas": [
+        {
+          "name": "Madonna di Campiglio",
+          "pass_system": "Skirama Dolomiti",
+          "altitude_top_m": 2570,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Pinzolo",
+          "pass_system": "Skirama Dolomiti",
+          "altitude_top_m": 2100,
+          "distance_from_town_km": 15,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Folgarida-Marilleva",
+          "pass_system": "Skirama Dolomiti",
+          "altitude_top_m": 2400,
+          "distance_from_town_km": 8,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Madonna di Campiglio Pass",
+          "type": "local",
+          "covers": [
+            "Madonna di Campiglio",
+            "Pinzolo",
+            "Folgarida-Marilleva"
+          ],
+          "official_url": "https://www.campigliodolomiti.it/en/skiarea/inverno/skipass-prices-2025/26",
+          "search_hint": "Madonna di Campiglio ski pass price 2025/26 season adult day local",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Elegant Italian resort; Dolomite Brenta backdrop; 150km pistes in Campiglio sector; Ducati and Italian fashion brands prominent; famous 3-Tre World Cup slalom course"
+        },
+        {
+          "name": "Superskirama Dolomiti Adamello Brenta",
+          "type": "super",
+          "covers": [
+            "Madonna di Campiglio",
+            "Pinzolo",
+            "Folgarida-Marilleva",
+            "Val di Sole",
+            "Pejo",
+            "Rabbi",
+            "Andalo",
+            "Fai della Paganella"
+          ],
+          "official_url": "https://www.skirama.it/en/superskirama-ski-pass-rates",
+          "search_hint": "Skirama Dolomiti ski pass price 2025/26 season adult day Madonna di Campiglio",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "380km pistes across entire Adamello Brenta Dolomites; Brenta Dolomites UNESCO World Heritage site; super-pass gives access to all linked areas; good value for longer stays"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Madonna di Campiglio",
+          "url": "https://www.intersport-rent.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Fratelli Boch",
+          "url": "https://www.boch.it/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Rent Campiglio",
+          "url": "https://www.campigliodolomiti.it/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "09:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Crans-Montana": {
+      "ski_areas": [
+        {
+          "name": "Crans-Montana",
+          "pass_system": "Crans-Montana Ski Pass",
+          "altitude_top_m": 3000,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Crans-Montana Ski Pass",
+          "type": "local",
+          "covers": [
+            "Crans-Montana",
+            "Montana-Aminona"
+          ],
+          "official_url": "https://www.mycma.ch/en-US/winter-prices/",
+          "search_hint": "Crans-Montana ski pass price 2025/26 adult day CHF Valais",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; sunny plateau resort in Valais at 1500m; 140km pistes; south-facing slopes get excellent sun; online discount available"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Crans-Montana",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Service Crans-Montana",
+          "url": "https://www.skiservice-cransmontana.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Altitude Crans-Montana",
+          "url": "https://www.sport-altitude.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Saas-Fee": {
+      "ski_areas": [
+        {
+          "name": "Saas-Fee Glacier",
+          "pass_system": "Saas-Fee Ski Pass",
+          "altitude_top_m": 3600,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Saas-Fee Ski Pass",
+          "type": "local",
+          "covers": [
+            "Saas-Fee Glacier",
+            "Saas-Fee ski area"
+          ],
+          "official_url": "https://www.saas-fee.ch/en/ski-passes-1",
+          "search_hint": "Saas-Fee ski pass price 2025/26 adult day CHF glacier",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; car-free glacier resort at 1800m; year-round skiing on Fee Glacier at 3600m; 100km pistes; book online for discounts; season pass very popular"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Saas-Fee",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiverleih Saas-Fee",
+          "url": "https://www.saas-fee.ch/en/winter/skiing/ski-rental/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Alpin Saas-Fee",
+          "url": "https://www.sportalpin-saasfee.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Wengen": {
+      "ski_areas": [
+        {
+          "name": "Wengen / Lauberhorn",
+          "pass_system": "Jungfrau Ski Region",
+          "altitude_top_m": 2320,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Kleine Scheidegg / Männlichen",
+          "pass_system": "Jungfrau Ski Region",
+          "altitude_top_m": 2061,
+          "distance_from_town_km": 3,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Jungfrau Ski Region",
+          "type": "regional",
+          "covers": [
+            "Grindelwald-First",
+            "Kleine Scheidegg / Männlichen",
+            "Wengen",
+            "Mürren-Schilthorn"
+          ],
+          "official_url": "https://www.jungfrau.ch/en-gb/jungfrau-ski-region/buy-skipass/",
+          "search_hint": "Jungfrau Ski Region ski pass price 2025/26 adult day CHF Wengen Grindelwald",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; same pass as Grindelwald; 206km pistes across 4 areas; home of Lauberhorn World Cup downhill; Swiss Travel Pass discounts; traditional car-free village"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Wengen",
+          "url": "https://www.intersport-wengen.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Alpin Wengen",
+          "url": "https://www.sport-alpin-wengen.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiverleih Wengen",
+          "url": "https://www.wengen.ch/en/skiing/ski-rental.html",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "St. Moritz": {
+      "ski_areas": [
+        {
+          "name": "Corviglia",
+          "pass_system": "Engadin St. Moritz Ski Pass",
+          "altitude_top_m": 3057,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Corvatsch",
+          "pass_system": "Engadin St. Moritz Ski Pass",
+          "altitude_top_m": 3451,
+          "distance_from_town_km": 5,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Diavolezza-Lagalb",
+          "pass_system": "Engadin St. Moritz Ski Pass",
+          "altitude_top_m": 3056,
+          "distance_from_town_km": 10,
+          "terrain": "expert",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Engadin St. Moritz Ski Pass",
+          "type": "regional",
+          "covers": [
+            "Corviglia",
+            "Corvatsch",
+            "Diavolezza-Lagalb"
+          ],
+          "official_url": "https://www.mountains.ch/en/tickets/",
+          "search_hint": "Engadin St. Moritz ski pass price 2025/26 adult day CHF Corviglia Corvatsch",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; luxury resort in Upper Engadin at 1856m; 350km pistes; Upper Engadin All-Inclusive available combining ski pass with hotel amenities; Bernina Express railway nearby"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport St. Moritz",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiverleih Hauser St. Moritz",
+          "url": "https://www.hauserstmoritz.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Belvédère",
+          "url": "https://www.sportbelvedere.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Davos-Klosters": {
+      "ski_areas": [
+        {
+          "name": "Parsenn (Davos-Klosters)",
+          "pass_system": "Davos Klosters Mountains Pass",
+          "altitude_top_m": 2844,
+          "distance_from_town_km": 1,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Jakobshorn",
+          "pass_system": "Davos Klosters Mountains Pass",
+          "altitude_top_m": 2590,
+          "distance_from_town_km": 0,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Pischa",
+          "pass_system": "Davos Klosters Mountains Pass",
+          "altitude_top_m": 2484,
+          "distance_from_town_km": 5,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Rinerhorn",
+          "pass_system": "Davos Klosters Mountains Pass",
+          "altitude_top_m": 2490,
+          "distance_from_town_km": 10,
+          "terrain": "beginner",
+          "night_skiing": false
+        },
+        {
+          "name": "Schatzalp / Strela",
+          "pass_system": "Davos Klosters Mountains Pass",
+          "altitude_top_m": 1861,
+          "distance_from_town_km": 1,
+          "terrain": "beginner",
+          "night_skiing": true
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Davos Klosters Mountains Pass",
+          "type": "regional",
+          "covers": [
+            "Parsenn (Davos-Klosters)",
+            "Jakobshorn",
+            "Pischa",
+            "Rinerhorn",
+            "Schatzalp / Strela"
+          ],
+          "official_url": "https://www.davosklostersmountains.ch/en/mountains/winter/rates-tickets/ski-regional-tickets",
+          "search_hint": "Davos Klosters ski pass price 2025/26 adult day CHF Parsenn",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; largest ski resort in Switzerland by area; 300km pistes; also home to WEF Davos; night skiing at Schatzalp; Royal favourite (Prince Charles regularly skis Klosters)"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Davos",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Weber Davos",
+          "url": "https://www.sport-weber.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Bolgenschanze Rental",
+          "url": "https://www.bolgen.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Laax": {
+      "ski_areas": [
+        {
+          "name": "Flims Laax Falera",
+          "pass_system": "Flims Laax Falera Ski Pass",
+          "altitude_top_m": 3018,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Flims Laax Falera Ski Pass",
+          "type": "regional",
+          "covers": [
+            "Flims Laax Falera",
+            "Crap Sogn Gion",
+            "Vorab Glacier"
+          ],
+          "official_url": "https://www.laax.com/shop?tab=tickets",
+          "search_hint": "Laax Flims Falera ski pass price 2025/26 adult day CHF freestyle",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; 235km pistes; world-class freestyle and snowpark (Crap Sogn Gion); LAAX app for mobile lift pass; Europe's largest halfpipe; popular with younger/freestyle crowd"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "LAAX Rental (on-mountain)",
+          "url": "https://www.laax.com/en/skiing-snowboarding/ski-rental/",
+          "online_discount": true
+        },
+        {
+          "name": "Intersport Laax",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Camischolas Laax",
+          "url": "https://www.camischolas.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Andermatt": {
+      "ski_areas": [
+        {
+          "name": "Gemsstock",
+          "pass_system": "Andermatt-Sedrun-Disentis SkiArena Pass",
+          "altitude_top_m": 2963,
+          "distance_from_town_km": 0,
+          "terrain": "expert",
+          "night_skiing": false
+        },
+        {
+          "name": "Nätschen-Winterhorn",
+          "pass_system": "Andermatt-Sedrun-Disentis SkiArena Pass",
+          "altitude_top_m": 2369,
+          "distance_from_town_km": 2,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Sedrun-Disentis",
+          "pass_system": "Andermatt-Sedrun-Disentis SkiArena Pass",
+          "altitude_top_m": 2880,
+          "distance_from_town_km": 20,
+          "terrain": "all-levels",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Andermatt-Sedrun-Disentis SkiArena Pass",
+          "type": "regional",
+          "covers": [
+            "Gemsstock",
+            "Nätschen-Winterhorn",
+            "Sedrun-Disentis"
+          ],
+          "official_url": "https://www.andermatt-sedrun-disentis.ch/en/stories/pricing",
+          "search_hint": "Andermatt Sedrun Disentis SkiArena ski pass price 2025/26 adult day CHF",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in CHF; rapidly expanding resort backed by Egyptian investor Samih Sawiris; The Chedi Andermatt luxury hotel; 180km pistes and growing; free ski bus between areas; off-piste mecca on Gemsstock"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Andermatt Sports (Gemsstock base)",
+          "url": "https://www.andermatt-sports.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Intersport Andermatt",
+          "url": "https://www.intersport-rent.ch/",
+          "online_discount": true
+        },
+        {
+          "name": "Ursern Valley Sport",
+          "url": "https://www.ursernvalleysport.ch/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Lech-Zürs": {
+      "ski_areas": [
+        {
+          "name": "Lech-Zürs am Arlberg",
+          "pass_system": "Ski Arlberg",
+          "altitude_top_m": 2450,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": false
+        },
+        {
+          "name": "Warth-Schröcken",
+          "pass_system": "Ski Arlberg",
+          "altitude_top_m": 2044,
+          "distance_from_town_km": 8,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Ski Arlberg",
+          "type": "regional",
+          "covers": [
+            "St. Anton am Arlberg",
+            "Lech-Zürs",
+            "Stuben-Zug",
+            "Warth-Schröcken",
+            "Sonnenkopf"
+          ],
+          "official_url": "https://www.skiarlberg.at/en/lech-zuers/tickets-season-times/prices-tickets-winter",
+          "search_hint": "Ski Arlberg pass price 2025/26 adult day St Anton Lech Zürs",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; 305km pistes; same pass as St. Anton am Arlberg — covers entire Ski Arlberg area including Lech, Zürs, Warth-Schröcken; legendary powder; royal favourite (Queen Noor, Emperor Akihito have skied here); book online"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Arlberg Lech",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Pepi Strolz Lech",
+          "url": "https://www.strolz.at/",
+          "online_discount": false
+        },
+        {
+          "name": "Ski Lech Rental",
+          "url": "https://www.lech-zuers.at/en/skiing/ski-rental/",
+          "online_discount": true
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": false,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Sölden": {
+      "ski_areas": [
+        {
+          "name": "Sölden / Giggijoch",
+          "pass_system": "Sölden Ski Pass",
+          "altitude_top_m": 3340,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        },
+        {
+          "name": "Rettenbach Glacier",
+          "pass_system": "Sölden Ski Pass",
+          "altitude_top_m": 3250,
+          "distance_from_town_km": 3,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Tiefenbach Glacier",
+          "pass_system": "Sölden Ski Pass",
+          "altitude_top_m": 3250,
+          "distance_from_town_km": 5,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Sölden Ski Pass",
+          "type": "local",
+          "covers": [
+            "Sölden / Giggijoch",
+            "Rettenbach Glacier",
+            "Tiefenbach Glacier"
+          ],
+          "official_url": "https://www.soelden.com/en/activities/winter/skiing-snowboarding/skipasses-prices/winter",
+          "search_hint": "Sölden ski pass price 2025/26 adult day EUR glacier Ötztal",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; season starts early Oct on glaciers (Rettenbach & Tiefenbach); James Bond 'Spectre' filmed here at the Ice Q restaurant; 148km pistes; night skiing on Rotkoglhütte run; FIS World Cup Alpine Skiing opening event every October"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Sölden",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Brunner Sölden",
+          "url": "https://www.sportbrunner.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Ski Optimal Sölden",
+          "url": "https://www.skioptimal.at/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:00",
+        "last_lift": "16:30",
+        "half_day_start": "12:00"
+      }
+    },
+    "Mayrhofen": {
+      "ski_areas": [
+        {
+          "name": "Mayrhofen / Penken",
+          "pass_system": "Mayrhofen-Hippach Ski Pass",
+          "altitude_top_m": 2095,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        },
+        {
+          "name": "Ahorn",
+          "pass_system": "Mayrhofen-Hippach Ski Pass",
+          "altitude_top_m": 2000,
+          "distance_from_town_km": 1,
+          "terrain": "beginner",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Mayrhofen-Hippach Ski Pass",
+          "type": "local",
+          "covers": [
+            "Mayrhofen / Penken",
+            "Ahorn"
+          ],
+          "official_url": "https://www.mayrhofen.at/en/pages/skiticket-mountopolis-zillertal",
+          "search_hint": "Mayrhofen ski pass price 2025/26 adult day EUR Penken Zillertal",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; local pass covers Mayrhofen area including Penken and Ahorn; famous Harakiri piste (78% gradient, steepest in Austria); night skiing on Penken; vibrant après-ski"
+        },
+        {
+          "name": "Zillertal Superskipass",
+          "type": "super",
+          "covers": [
+            "Mayrhofen / Penken",
+            "Ahorn",
+            "Hintertux Glacier",
+            "Zillertal Arena",
+            "Ski- und Gletscherwelt Zillertal 3000",
+            "Kaltenbach-Hochzillertal"
+          ],
+          "official_url": "https://www.zillertal.at/en/winter/holidays/zillertal-superskipass.html",
+          "search_hint": "Zillertal Superskipass price 2025/26 adult day EUR all Zillertal resorts",
+          "pass_types": [
+            "day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Covers all Zillertal valley resorts including Hintertux year-round glacier; ~665km pistes total; excellent value for week's stay exploring the whole valley"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Mayrhofen",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Hubert Mayrhofen",
+          "url": "https://www.sport-hubert.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Rudi's Ski and Sport Mayrhofen",
+          "url": "https://www.rudis-ski.at/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    },
+    "Saalbach-Hinterglemm": {
+      "ski_areas": [
+        {
+          "name": "Saalbach",
+          "pass_system": "Skicircus Saalbach Hinterglemm Leogang Fieberbrunn Pass",
+          "altitude_top_m": 2096,
+          "distance_from_town_km": 0,
+          "terrain": "all-levels",
+          "night_skiing": true
+        },
+        {
+          "name": "Hinterglemm",
+          "pass_system": "Skicircus Saalbach Hinterglemm Leogang Fieberbrunn Pass",
+          "altitude_top_m": 2096,
+          "distance_from_town_km": 4,
+          "terrain": "all-levels",
+          "night_skiing": true
+        },
+        {
+          "name": "Leogang",
+          "pass_system": "Skicircus Saalbach Hinterglemm Leogang Fieberbrunn Pass",
+          "altitude_top_m": 1978,
+          "distance_from_town_km": 8,
+          "terrain": "intermediate",
+          "night_skiing": false
+        },
+        {
+          "name": "Fieberbrunn",
+          "pass_system": "Skicircus Saalbach Hinterglemm Leogang Fieberbrunn Pass",
+          "altitude_top_m": 2020,
+          "distance_from_town_km": 15,
+          "terrain": "intermediate",
+          "night_skiing": false
+        }
+      ],
+      "pass_systems": [
+        {
+          "name": "Skicircus Saalbach Hinterglemm Leogang Fieberbrunn Pass",
+          "type": "regional",
+          "covers": [
+            "Saalbach",
+            "Hinterglemm",
+            "Leogang",
+            "Fieberbrunn"
+          ],
+          "official_url": "https://www.saalbach.com/en/winter/skitickets/skitickets-shlf",
+          "search_hint": "Saalbach-Hinterglemm Skicircus ski pass price 2025/26 adult day EUR",
+          "pass_types": [
+            "day",
+            "half_day",
+            "multi_day",
+            "season"
+          ],
+          "notes": "Priced in EUR; 270km pistes in the Skicircus circuit; night skiing with floodlit slopes in Saalbach and Hinterglemm; FIS World Cup venue; superb après-ski; Freeride World Tour stage"
+        },
+        {
+          "name": "ALPIN CARD",
+          "type": "super",
+          "covers": [
+            "Saalbach",
+            "Hinterglemm",
+            "Leogang",
+            "Fieberbrunn",
+            "Zell am See",
+            "Kaprun / Kitzsteinhorn Glacier",
+            "Hochkönig",
+            "Maria Alm"
+          ],
+          "official_url": "https://www.saalbach.com/en/winter/skitickets/skitickets-shlf",
+          "search_hint": "ALPIN CARD ski pass price 2025/26 adult Saalbach Zell am See Kaprun Hochkönig",
+          "pass_types": [
+            "multi_day",
+            "season"
+          ],
+          "notes": "Super-pass covers Saalbach + Zell am See-Kaprun + Hochkönig area; ~860km pistes total; season pass best value; Kaprun Kitzsteinhorn glacier skiing year-round"
+        }
+      ],
+      "rental_shops": [
+        {
+          "name": "Intersport Saalbach",
+          "url": "https://www.intersport-rent.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Sport Hagleitner Saalbach",
+          "url": "https://www.hagleitner-sport.at/",
+          "online_discount": true
+        },
+        {
+          "name": "Skiverleih Saalbach",
+          "url": "https://www.saalbach.com/en/winter/skiing/ski-rental/",
+          "online_discount": false
+        }
+      ],
+      "airline_ski_bag": "easyJet ~£42/way; BA included in some fares; Ryanair ~€35/way; SWISS ~CHF 60/way; Wizz Air ~€32/way",
+      "night_skiing_available": true,
+      "typical_hours": {
+        "first_lift": "08:30",
+        "last_lift": "16:30",
+        "half_day_start": "12:30"
+      }
+    }
+  }
+}
