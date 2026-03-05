@@ -47,6 +47,7 @@ function getUrlParams() {
     autoSend: params.get("ch") || params.get("auto") || "",
     departDate: params.get("d") || params.get("depart") || "",
     returnDate: params.get("ret") || params.get("return") || "",
+    preference: params.get("pref") || params.get("preference") || "",
   };
 }
 
@@ -331,6 +332,7 @@ export default function SkiRoutePlanner() {
   const didAutoSearch = useRef(false);
   const [departDate, setDepartDate] = useState(urlParams.departDate || "");
   const [returnDate, setReturnDate] = useState(urlParams.returnDate || "");
+  const [preference, setPreference] = useState(urlParams.preference || "");
 
   const canSearch = origin.trim().length > 1 && resort;
 
@@ -402,13 +404,14 @@ export default function SkiRoutePlanner() {
         resort,
         depart_date: departDate,
         return_date: returnDate,
+        preference: preference,
         routes: currentSelected.map(r => ({
           id: r.id, name: r.name, name_en: r.name_en,
           total_duration_hours: r.total_duration_hours, price_tier: r.price_tier,
         }))
       }];
     });
-  }, [selected, origin, resort, routes, departDate, returnDate]);
+  }, [selected, origin, resort, routes, departDate, returnDate, preference]);
 
   const handleRemoveFromCart = useCallback((index) => {
     setCart(prev => {
@@ -427,6 +430,7 @@ export default function SkiRoutePlanner() {
       resort: item.resort,
       depart_date: item.depart_date,
       return_date: item.return_date,
+      preference: item.preference,
       selected_routes: item.routes,
     }));
   }, [cart]);
@@ -540,6 +544,14 @@ export default function SkiRoutePlanner() {
                   onFocus={e => e.target.style.borderColor = ACCENT}
                   onBlur={e => e.target.style.borderColor = CARD_BORDER} />
               </div>
+            </div>
+            <div>
+              <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>💬 搜价偏好（选填）</label>
+              <input value={preference} onChange={e => setPreference(e.target.value)} placeholder="早点到 / 最便宜 / 不要红眼 / 全服务..."
+                style={{ width: "100%", height: INPUT_H, padding: "0 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
+                  background: CARD_BG, color: TEXT1, fontSize: 15, outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" }}
+                onFocus={e => e.target.style.borderColor = ACCENT}
+                onBlur={e => e.target.style.borderColor = CARD_BORDER} />
             </div>
             <button onClick={handleSearch} disabled={!canSearch || loading}
               style={{ padding: "14px", borderRadius: 10, border: "none", fontSize: 15, fontWeight: 700,
