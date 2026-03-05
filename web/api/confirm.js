@@ -29,8 +29,9 @@ export default async function handler(req, res) {
   const sections = selections.map(s => {
     const ids = s.selected_routes.map(r => r.id).join(", ");
     const dateLine = s.depart_date ? `\n📅 ${s.depart_date}${s.return_date ? ` → ${s.return_date}` : ""}` : "";
+    const prefLine = s.preference ? `\n💬 偏好: ${s.preference}` : "";
     const lines = s.selected_routes.map(r => `${r.id} ${r.name}`).join("\n");
-    return `**${s.origin} → ${s.resort}** — ${ids}${dateLine}\n${lines}`;
+    return `**${s.origin} → ${s.resort}** — ${ids}${dateLine}${prefLine}\n${lines}`;
   }).join("\n\n");
 
   const content = `<@1478519063960354948> 确认 ${allIds}\n\n${sections}`;
