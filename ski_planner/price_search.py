@@ -161,15 +161,15 @@ def _build_flight_plan(leg: dict, date_human: str, date_sky: str, date_str: str,
     to_code = leg.get("to_code", "")
     month_year = _month_year(date_str)
 
-    # Search queries cover both price and schedule — not just cheapest
+    # Search queries — always one-way
     queries = [
-        f"{from_city} to {to_city} flights {date_human}",
+        f"{from_city} to {to_city} one way flights {date_human}",
     ]
     if from_code and to_code:
-        queries.append(f"{from_code} {to_code} flights {date_human} price schedule")
+        queries.append(f"{from_code} {to_code} one way flights {date_human} price schedule")
 
-    # Google Flights only — most comprehensive, shows all airlines + times + prices
-    primary_q = quote_plus(f"{from_city} to {to_city} {date_human}")
+    # Google Flights — one-way search (tt=o means one-way trip type)
+    primary_q = quote_plus(f"{from_city} to {to_city} {date_human} one way")
     primary_url = f"https://www.google.com/travel/flights?q={primary_q}"
 
     return {

@@ -27,6 +27,7 @@ const TEXT1 = "#f1f5f9";
 const TEXT2 = "#94a3b8";
 const TEXT3 = "#64748b";
 const FONT = "'DM Sans', 'Segoe UI', system-ui, sans-serif";
+const INPUT_H = 46;
 
 function formatDateShort(dateStr) {
   if (!dateStr) return "";
@@ -116,9 +117,10 @@ function ResortDropdown({ value, onChange }) {
     <div ref={ref} style={{ position: "relative" }}>
       <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>🎿 滑雪场</label>
       <div onClick={() => setOpen(!open)} style={{
-        padding: "12px 16px", borderRadius: 10, border: `1px solid ${open ? ACCENT : CARD_BORDER}`,
+        height: INPUT_H, padding: "0 16px", borderRadius: 10, border: `1px solid ${open ? ACCENT : CARD_BORDER}`,
         background: CARD_BG, color: value ? TEXT1 : TEXT3, cursor: "pointer", fontSize: 15,
-        display: "flex", justifyContent: "space-between", alignItems: "center", transition: "border-color 0.2s"
+        display: "flex", justifyContent: "space-between", alignItems: "center", transition: "border-color 0.2s",
+        boxSizing: "border-box"
       }}>
         <span>{value || "选择目的地..."}</span>
         <span style={{ fontSize: 10, color: TEXT3 }}>{open ? "▲" : "▼"}</span>
@@ -273,7 +275,7 @@ function CartStrip({ cart, onRemove }) {
   const totalRoutes = cart.reduce((sum, item) => sum + item.routes.length, 0);
   return (
     <div style={{
-      maxWidth: 600, margin: "0 auto", width: "100%", padding: "0 16px", marginBottom: 12
+      marginBottom: 12
     }}>
       <div style={{
         background: ACCENT + "10", border: `1px solid ${ACCENT}30`, borderRadius: 12,
@@ -471,7 +473,7 @@ export default function SkiRoutePlanner() {
   }, [buildSelections]);
 
   return (
-    <div style={{ fontFamily: FONT, background: BG, minHeight: "100vh", color: TEXT1, display: "flex", flexDirection: "column" }}>
+    <div style={{ fontFamily: FONT, background: BG, minHeight: "100vh", color: TEXT1, display: "flex", flexDirection: "column", overflowX: "hidden" }}>
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       <ConfirmToast show={toast.show} message={toast.message} />
 
@@ -494,7 +496,7 @@ export default function SkiRoutePlanner() {
               <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>📍 出发城市</label>
               <input value={origin} onChange={e => setOrigin(e.target.value)} placeholder="London, Manchester, Dublin..."
                 onKeyDown={e => { if (e.key === "Enter") handleSearch(); }}
-                style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
+                style={{ width: "100%", height: INPUT_H, padding: "0 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
                   background: CARD_BG, color: TEXT1, fontSize: 15, outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" }}
                 onFocus={e => e.target.style.borderColor = ACCENT}
                 onBlur={e => e.target.style.borderColor = CARD_BORDER} />
@@ -518,23 +520,22 @@ export default function SkiRoutePlanner() {
                   else { setRoutes(null); setError(`暂无 ${o} → ${r} 的预存路线。请回到 Discord 让茄子为你实时生成。`); }
                 }
               }} />
-            <div style={{ display: "flex", gap: 10 }}>
-              <div style={{ flex: 1 }}>
-                <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>📅 出发日期</label>
+            <div>
+              <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>📅 日期</label>
+              <div style={{ display: "flex", gap: 8 }}>
                 <input type="date" value={departDate} onChange={e => { setDepartDate(e.target.value); if (returnDate && e.target.value > returnDate) setReturnDate(""); }}
                   min={new Date().toISOString().split("T")[0]}
-                  style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
-                    background: CARD_BG, color: TEXT1, fontSize: 14, outline: "none", boxSizing: "border-box",
+                  placeholder="出发"
+                  style={{ flex: 1, minWidth: 0, height: INPUT_H, padding: "0 12px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
+                    background: CARD_BG, color: departDate ? TEXT1 : TEXT3, fontSize: 14, outline: "none", boxSizing: "border-box",
                     colorScheme: "dark", transition: "border-color 0.2s" }}
                   onFocus={e => e.target.style.borderColor = ACCENT}
                   onBlur={e => e.target.style.borderColor = CARD_BORDER} />
-              </div>
-              <div style={{ flex: 1 }}>
-                <label style={{ fontSize: 12, color: TEXT2, marginBottom: 6, display: "block", fontWeight: 500, letterSpacing: 0.5, textTransform: "uppercase" }}>📅 返回日期</label>
                 <input type="date" value={returnDate} onChange={e => setReturnDate(e.target.value)}
                   min={departDate || new Date().toISOString().split("T")[0]}
-                  style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
-                    background: CARD_BG, color: TEXT1, fontSize: 14, outline: "none", boxSizing: "border-box",
+                  placeholder="返回"
+                  style={{ flex: 1, minWidth: 0, height: INPUT_H, padding: "0 12px", borderRadius: 10, border: `1px solid ${CARD_BORDER}`,
+                    background: CARD_BG, color: returnDate ? TEXT1 : TEXT3, fontSize: 14, outline: "none", boxSizing: "border-box",
                     colorScheme: "dark", transition: "border-color 0.2s" }}
                   onFocus={e => e.target.style.borderColor = ACCENT}
                   onBlur={e => e.target.style.borderColor = CARD_BORDER} />
@@ -552,12 +553,15 @@ export default function SkiRoutePlanner() {
       </div>
 
       {/* Cart strip */}
-      <div style={{ paddingTop: 12 }}>
-        <CartStrip cart={cart} onRemove={handleRemoveFromCart} />
+      <div style={{ padding: "12px 20px 0" }}>
+        <div style={{ maxWidth: 600, margin: "0 auto" }}>
+          <CartStrip cart={cart} onRemove={handleRemoveFromCart} />
+        </div>
       </div>
 
       {/* Results */}
-      <div style={{ flex: 1, maxWidth: 600, margin: "0 auto", width: "100%", padding: "8px 16px 120px" }}>
+      <div style={{ flex: 1, padding: "8px 20px 120px" }}>
+      <div style={{ maxWidth: 600, margin: "0 auto" }}>
         {error && (
           <div style={{ padding: "14px 16px", borderRadius: 10, background: "#7f1d1d30", border: "1px solid #991b1b50", color: "#fca5a5", fontSize: 13, marginBottom: 16 }}>
             ⚠️ {error}
@@ -624,6 +628,7 @@ export default function SkiRoutePlanner() {
           </>
         )}
         {routes && routes.length === 0 && <div style={{ textAlign: "center", padding: 40, color: TEXT3 }}>没有找到路线</div>}
+      </div>
       </div>
 
       {/* Bottom confirm bar */}
