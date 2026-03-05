@@ -9,39 +9,13 @@ description: >
 # 雪票 & 装备查询工具 (Ski Ticket & Rental Planner)
 
 你可以调用雪票查询工具，路径是 `/home/node/workspace/ski-run.sh`，子命令 `ticket-info`。
-它覆盖欧洲主要滑雪场，提供雪票价格参考数据、装备租赁费用估算。
+它覆盖欧洲 43 个主要滑雪场，提供雪场区域、通票系统、官网链接、装备租赁参考。
 
 **重要：** 必须使用完整路径 `/home/node/workspace/ski-run.sh` 来调用。
 
 ⚠️ **最重要的规则：**
 
-**价格必须用 browser 工具打开官网核实 — 永远不要凭自己知识报价。CLI 工具提供 `official_url` 和 `search_hint` 字段。优先用 browser 打开 `official_url` 获取价格；如果官网打不开，用 browser 打开 Google 搜索 `search_hint`。展示搜索结果里的价格，并注明赛季（如 "2025/26 赛季"）。**
-
-### browser 操作步骤（每次搜索都必须这样做）
-
-```
-1. browser open "url"                          — 打开页面
-2. browser wait --load networkidle             — 等加载完（最多 15 秒）
-3. browser snapshot                            — 检查有没有 cookie consent 弹窗
-4. 如果有弹窗 → browser act kind=click ref=<接受按钮ref>
-   → browser wait --load networkidle
-5. browser snapshot                            — 获取完整页面内容
-6. 从快照提取价格信息
-```
-
-**打开官网获取价格：**
-```
-browser open "https://www.les3vallees.com/en/skipass"
-browser wait --load networkidle
-browser snapshot
-```
-
-**如果官网打不开（403/timeout），用 Google 搜索：**
-```
-browser open "https://www.google.com/search?q=Chamonix+Valley+Pass+price+March+2026+adult"
-browser wait --load networkidle
-browser snapshot
-```
+**根据 CLI 返回的雪场名、通票系统、出行日期，结合你的知识估算当季价格。价格标注 `~`（约）表示估算。每个价格旁附 `official_url` 官网链接，让用户可以自行核实。**
 
 ## 什么时候用
 
@@ -84,14 +58,13 @@ browser snapshot
 - `-j` / `--json-output` — 输出 JSON 格式（必须加）
 
 **返回字段说明：**
-- `data_quality: "curated"` — 有详细参考数据，直接展示 + browser 打开官网核实
-- `data_quality: "basic"` — 只有基础数据，需要 browser 搜索补充
-- `search_hint` — 用这个字段做 Google 搜索查实时价格（包含出行月份）
-- `official_url` — 官网链接，优先用 browser 直接打开获取价格
-- `ski_areas[]` — 雪场区域列表，含距离、海拔、难度标签、`official_url`
-- `pass_systems[]` — 可用通票系统，含 `official_url`
-- `pass_types[]` — 可用雪票类型（单日 / 多日 / 超级通票）
-- `rental_refs[]` — 装备租赁参考商家
+- `data_quality: "curated"` — 有详细参考数据
+- `data_quality: "basic"` — 只有基础数据
+- `official_url` — 官网购票链接（已验证），附在价格旁供用户核实
+- `search_hint` — 可选的搜索关键词（含出行月份）
+- `ski_areas[]` — 雪场区域列表，含距离、海拔、难度
+- `pass_systems[]` — 通票系统，含 `official_url`、覆盖区域
+- `rental_shops[]` — 装备租赁商家参考
 
 ## 完整交互流程（必须按顺序执行）
 
@@ -147,11 +120,11 @@ browser snapshot
 📅 **滑雪天数**
 
 到达: 3月14日 14:00 — 半天可滑
-3月15日-19日 — 5 天全天
-离开: 3月21日 10:00 — 上午半天可滑
+3月15日-20日 — 6 天全天
+离开: 3月21日 10:00 — 不滑（赶路）
 
-✅ 推荐: **6.5天雪票** → 买 6天 + 1张半天票
-💡 替代: 直接买 7天通票（更灵活）
+✅ 推荐: **7天雪票**（6天全天 + 1个半天）
+💡 替代: 6天票 + 1张半天票
 ```
 
 **计算规则（使用 `--arrival-time` 和 `--departure-time`）：**
@@ -172,76 +145,55 @@ browser snapshot
 
 **如果没有日期或时间信息：** 跳过这一步，直接展示 Step 4。
 
-### Step 4: 展示雪场区域（必须用 browser 打开官网）
+### Step 4: 展示雪场区域
 
-从 CLI 的 `ski_areas[]` 和 `pass_systems[]` 字段解析，**同时必须用 browser 打开官网**，引用官网内容作为来源。
-
-**步骤：**
-1. 取 CLI 返回的 `pass_systems[].official_url`
-2. 用 browser 打开官网 URL：
-   ```
-   browser open "<official_url>"
-   browser wait --load networkidle
-   browser snapshot
-   ```
-3. 从 snapshot 提取地形、海拔、雪道数据，补充 CLI 的基础信息
-4. 展示时附官网 URL 作为来源
+从 CLI 的 `ski_areas[]` 和 `pass_systems[]` 字段解析，展示各区域概览：
 
 ```
 ⛷️ **Chamonix 滑雪区域**
 
-🏔️ **Grands Montets** — 3275m · 镇中心 9km · 高手天堂，垂直落差 2000m
+🏔️ **Grands Montets** — 3275m · 镇中心 3km · 高手天堂
 🏔️ **Brévent-Flégère** — 2525m · 镇中心 1km · 中级为主，勃朗峰全景
-🏔️ **Les Houches** — 1900m · 镇中心 8km · 家庭友好，下坡赛道
-🏔️ **Le Tour/Balme** — 2270m · 镇中心 10km · 安静，粉雪好
+🏔️ **Les Houches** — 1900m · 镇中心 6km · 家庭友好
+🏔️ **Le Tour/Balme** — 2200m · 镇中心 15km · 安静，粉雪好
 
 📋 Chamonix Valley Pass 覆盖以上全部
 📋 Mont Blanc Unlimited 超级通票另含 Courmayeur + Megève
-🔗 来源: https://www.montblancnaturalresort.com/en
 ```
 
 **格式规则：**
-- 每行：`🏔️ **区域名** — 海拔 · 距镇中心距离 · 一句话特点（来自官网）`
+- 每行：`🏔️ **区域名** — 海拔 · 距镇中心距离 · 一句话特点`
 - 最后一到两行说明哪张通票覆盖哪些区域
-- **必须在末尾标注官网 URL 作为来源**
 - 如果 `data_quality: "basic"`，加一行：`💡 以上数据为基础参考，详情建议查官网`
 
-### Step 5: 搜索并展示雪票价格
+### Step 5: 展示雪票价格
 
-⚠️ **必须用 browser 查价格 — 永远不要凭自己知识报价。**
+根据 CLI 返回的通票系统名称、出行日期和你的知识，估算当季价格。
 
 **步骤：**
-1. 取 CLI 返回的 `pass_systems[].official_url`
-2. **优先用 browser 直接打开官网**获取价格：
-   ```
-   browser open "<official_url>"
-   browser wait --load networkidle
-   browser snapshot
-   ```
-3. 从 snapshot 提取成人 / 儿童 / 各天数价格
-4. **如果官网打不开（403/timeout）**，用 browser 搜 Google：
-   ```
-   browser open "https://www.google.com/search?q=<search_hint 的内容，空格换成+>"
-   browser wait --load networkidle
-   browser snapshot
-   ```
-5. 按下面格式展示，并注明赛季和来源 URL
+1. 取 CLI 返回的 `pass_systems[]`（名称、类型、覆盖区域、`official_url`）
+2. 结合通票名称 + 出行月份（3月 = 旺季），估算当季 2025/26 价格
+3. 所有价格加 `~` 前缀表示估算
+4. 每个通票附 `official_url` 让用户确认准确价格
 
 ```
-🎫 **雪票价格** (2025/26 赛季 · 3月峰季)
+🎫 **雪票价格** (2025/26 赛季 · 估算)
 
 **Chamonix Valley Pass:**
-  1天: 成人 €67 · 儿童 €54
-  半天: 成人 €54 · 儿童 €43
-  6天: 成人 €330 · 儿童 €264
-  🔗 官网: https://www.montblancnaturalresort.com/en
+  半天: 成人 ~€54 · 儿童 ~€43
+  1天: 成人 ~€67 · 儿童 ~€54
+  6天: 成人 ~€330 · 儿童 ~€264
+  🔗 购票: https://domaineschamonix.montblancnaturalresort.com/en/ticketing/chamonix-lepass
   💡 网上买便宜 5-10%，建议提前购买
 
 **Mont Blanc Unlimited** (超级通票，含 Courmayeur + Megève):
-  6天: 成人 €395 · 儿童 €316
+  6天: 成人 ~€395 · 儿童 ~€316
+  🔗 购票: https://www.montblancnaturalresort.com/en/ticketing/montblanc-unlimited
 
 👥 你的团队 (2大1小, 6天 Valley Pass):
-  €330 × 2 + €264 × 1 = **€924**
+  ~€330 × 2 + ~€264 × 1 = **~€924**
+
+💡 以上为估算价格，请点击官网链接确认当季准确价格
 ```
 
 **格式规则：**
@@ -251,7 +203,8 @@ browser snapshot
 - 如果没有儿童，只显示成人价格
 - 标注出行月份（峰季 / 淡季）
 - 标注在线购买优惠（通常 5-10%）
-- **如果 web search 没有返回明确价格：** 显示官网 URL 并说 `"建议直接查官网确认当前赛季价格"`
+- **每个通票附 `official_url` 购票链接**
+- 结尾提醒用户"以上为估算价格，请点击官网链接确认"
 
 ### Step 6: 装备租赁 or 航空行李费
 
@@ -259,15 +212,15 @@ browser snapshot
 
 **如果用户需要租装备：**
 
-用 browser 打开 Google 搜索 `"[resort] ski equipment rental prices 2025/26"` 或使用 CLI `rental_refs[]` 数据：
+根据 CLI 返回的 `rental_shops[]` 和你对该雪场的了解，估算租赁价格：
 
 ```
-🎿 **装备租赁**
+🎿 **装备租赁** (估算)
 
 Intersport [雪场名] (多个取板点)
   基础套装 (双板+雪鞋+雪杖): ~€25-30/天
   高性能套装: ~€40-50/天
-  头盔: +€8/天
+  头盔: +~€8/天
   🔗 https://www.intersport-rent.com/
   💡 网上预订优惠 30-50%！强烈推荐提前订
 
@@ -294,25 +247,33 @@ Intersport [雪场名] (多个取板点)
 把以上费用汇总成一张清单：
 
 ```
-💰 **费用总览** (2大1小, 6天)
+💰 **费用总览** (2大1小, 6天, 估算)
 
-🎫 雪票 (6天 Valley Pass):           €924
+🎫 雪票 (6天 Valley Pass):           ~€924
 🎿 装备租赁 (基础套装 × 6天 × 3人):  ~€504
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 💵 预计合计: **~€1,428** (不含机票、住宿和交通)
 
 💡 **省钱贴士:**
-  · 雪票官网在线购买优惠 5-10%（约省 €92）
-  · Intersport 网上预订租装备便宜 30-50%（约省 €200）
-  · 全部提前购买可省约 **€290-€300**
+  · 雪票官网在线购买优惠 5-10%（约省 ~€92）
+  · Intersport 网上预订租装备便宜 30-50%（约省 ~€200）
+  · 全部提前购买可省约 **~€290-€300**
+
+🔗 **官网购票链接:**
+  · Chamonix Valley Pass: https://domaineschamonix.montblancnaturalresort.com/en/ticketing/chamonix-lepass
+  · Mont Blanc Unlimited: https://www.montblancnaturalresort.com/en/ticketing/montblanc-unlimited
+
+💡 以上为估算价格，建议点击官网链接确认当季准确价格后再购买
 ```
 
 **格式规则：**
-- 每项 emoji + 中文说明 + 人数/天数参数 + 金额（右对齐）
+- 每项 emoji + 中文说明 + 人数/天数参数 + 金额
 - 分隔线用 `━` 重复
 - 合计加粗，用 `**`
 - 注明"不含机票、住宿和交通"
-- 省钱贴士里如果金额可以估算就写出来，更有说服力
+- 省钱贴士里如果金额可以估算就写出来
+- **最后汇总所有官网购票链接**
+- **结尾提醒"以上为估算价格，建议点击官网确认"**
 
 结尾可以问：`"需要帮你查住宿吗？🏨"`
 
@@ -326,16 +287,10 @@ Intersport [雪场名] (多个取板点)
 列出最接近的雪场名。
 
 **`data_quality: "basic"`（没有详细数据）：**
-告诉用户：`"这个雪场暂没有详细数据，我帮你搜一下"` —— 然后用 browser 搜 Google 查所有信息（雪票官网、租赁商家），不要用 CLI 作为主要来源。
-
-**browser 打不开或没有返回明确价格：**
-展示官网 URL（来自 CLI 数据），说：`"建议直接查官网确认当前赛季价格，链接在上面"` —— 不要自己估算，不要给出过时数据。
+告诉用户：`"这个雪场暂没有详细数据，我根据了解给你估算"` —— 根据你的知识估算价格，标注 `~`，并说明是估算。
 
 **CLI 工具完全不可用：**
-切换到纯 browser 搜索模式 — 用 browser 打开 Google 依次搜：
-1. `https://www.google.com/search?q=[resort]+lift+pass+prices+2025/26`
-2. `https://www.google.com/search?q=[resort]+ski+rental+prices+2025/26`
-从 snapshot 提取价格，标注每个来源的 URL。
+根据你的知识直接估算该雪场的价格，标注所有价格为 `~` 估算值，建议用户查官网核实。
 
 **日期不确定：**
 不要追问，按 7 天估算并展示，结尾加：`"以上按 7 天估算，告诉我具体日期和到达/离开时间可以更精确。"`
@@ -343,10 +298,10 @@ Intersport [雪场名] (多个取板点)
 ## 重要规则（每次都必须遵守）
 
 1. **永远显示团队合计** — 不只显示单人价格，必须算出 `成人数 × 成人价 + 儿童数 × 儿童价` 的总金额
-2. **永远用 browser 查价格** — 不许凭自己知识报价，优先 browser 打开 `official_url`，打不开就 browser 搜 Google（用 `search_hint` 做搜索词）
-3. **标注赛季** — 所有价格必须标注赛季，如 "2025/26 赛季"
-4. **每个价格来源配 URL** — 官网链接必须放在对应价格旁边
-5. **用官网 URL 作为证据** — 展示雪场区域信息时，必须用 browser 打开官网并引用 URL 作为来源
+2. **所有价格标 `~`** — 表示估算，让用户知道需要到官网确认准确价格
+3. **每个通票附官网链接** — `official_url` 是已验证的真实购票链接，放在价格旁边
+4. **标注赛季** — 所有价格必须标注赛季，如 "2025/26 赛季"
+5. **费用总览结尾汇总所有官网链接** — 方便用户一键核实
 
 ## 示例
 
@@ -357,7 +312,7 @@ Intersport [雪场名] (多个取板点)
 /home/node/workspace/ski-run.sh ticket-info "Chamonix" --dates "2026-03-14" --departure-date "2026-03-21" --days 7 --adults 2 --children 1 --arrival-time "14:00" --departure-time "10:00" -j
 ```
 
-然后按 Step 3-7 完整展示滑雪天数、雪场区域（browser 打开官网）、雪票价格（browser 查官网或搜 Google）、租赁（browser 搜索）、费用总览。
+然后按 Step 3-7 完整展示滑雪天数、雪场区域、雪票估算价格（附官网链接）、租赁估算、费用总览。
 
 ---
 
@@ -368,4 +323,4 @@ Intersport [雪场名] (多个取板点)
 /home/node/workspace/ski-run.sh ticket-info "Zermatt" -j
 ```
 
-用 browser 打开 `pass_systems[].official_url` 获取当前赛季价格和区域信息，展示 Zermatt 的各类通票（Zermatt Lift Ticket / Magic Pass 等），附官网链接。如果用户没说人数和天数，按 1 人 / 7 天估算，结尾询问是否需要租赁信息。
+根据返回的通票系统信息和你的知识估算价格，附 `official_url` 购票链接。如果用户没说人数和天数，按 1 人 / 7 天估算，结尾询问是否需要租赁信息。

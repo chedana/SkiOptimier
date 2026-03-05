@@ -10,10 +10,12 @@ requires-python = ">=3.11"
 dependencies = [
     "click>=8.0",
     "anthropic>=0.30.0",
+    "playwright>=1.40.0",
 ]
 
 [project.scripts]
 ski = "ski_planner.cli:main"
+flight = "flight_search.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["ski_planner*"]
+include = ["ski_planner*", "flight_search*"]
