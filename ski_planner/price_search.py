@@ -168,8 +168,8 @@ def _build_flight_plan(leg: dict, date_human: str, date_sky: str, date_str: str,
     if from_code and to_code:
         queries.append(f"{from_code} {to_code} one way flights {date_human} price schedule")
 
-    # Google Flights — one-way search (tt=o means one-way trip type)
-    primary_q = quote_plus(f"{from_city} to {to_city} {date_human} one way")
+    # Google Flights — one-way nonstop search
+    primary_q = quote_plus(f"{from_city} to {to_city} {date_human} one way nonstop")
     primary_url = f"https://www.google.com/travel/flights?q={primary_q}"
 
     return {
